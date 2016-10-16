@@ -1,0 +1,20 @@
+title: Preston Edmands Portfolio 2016
+email: pedmands@gmail.com
+description: >
+  The 2016 portfolio of web designer & programmer Preston Edands
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: pedmands
+github_username:  pedmands
+
+collections:
+  portfolio:
+
+# Build settings
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
