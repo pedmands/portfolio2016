@@ -71,4 +71,4 @@ $('ul.tabs li').click(function(){
 	$("#"+tab_id).addClass('current');
 });
 
-});
+}); // $(document).ready
