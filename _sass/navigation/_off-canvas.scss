@@ -1,38 +1,47 @@
-/* http://scotch.io/tutorials/off-canvas-menus-with-css3-transitions-and-transforms */
-
 #site-wrapper {
   position: relative;
   overflow: hidden;
   width: 100%;
 }
-#site-canvas {
-  width: 100%;
-  height: 100%;
-
+#content {
+   width:100%;
+   height: 5000px;
+   overflow: hidden;
+   transition: all .4s ease-in;
   -webkit-transform: translateX(0);
   transform: translateX(0);
-
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-
-
+  /*-webkit-backface-visibility: hidden;
+  backface-visibility: hidden;*/
 }
-.show-nav #site-canvas {
+.show-nav #content {
   -webkit-transform: translateX(300px);
   transform: translateX(300px);
 
   transform: translate3d(300px, 0, 0);
   -webkit-transform: translate3d(300px, 0, 0);
 }
-#site-menu {
-  width: 300px;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: -300px;
-  background: #428bca;
+#menu {
+   transition: all .4s ease-in;
+	width: 300px;
+   height: 100%;
+	position: fixed;
+	left: -300px;
+	top: 0;
+   overflow: visible;
+   z-index:100;
 }
-.snappy { -webkit-transition: all 300ms cubic-bezier(.694, .0482, .335, 1); transition: all 300ms cubic-bezier(.694, .0482, .335, 1); }
+#menu.open {
+   left:0;
+}
+#menu-toggle {
+   width: 60px;
+   height: 60px;
+   position: absolute;
+   right:-60px;
+}
+.snap-out {
+   -webkit-transition: all 300ms cubic-bezier(.694, .0482, .335, 1);
+   transition: all 300ms cubic-bezier(.694, .0482,.335, 1);
+}

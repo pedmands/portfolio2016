@@ -9,9 +9,11 @@
 </head>
 <body>
    <div id="site-wrapper">
-     <div id="site-canvas">
 
-       <div id="site-menu">
+       <div id="menu">
+          <button data-button='{"func": "snap-out"}' id="menu-toggle">
+             <i class="fa fa-bars"></i>
+          </button>
           <nav class="main-nav" id="main-nav">
              <ul>
                 <li>Home</li>
@@ -22,17 +24,15 @@
                 <li>Contact</li>
              </ul>
           </nav> <!-- main-navigation -->
-       </div>
+       </div><!-- #menu -->
 
 
-<div class="site-content">
+<div id="content">
 
       <div class="lander-wrap">
          <header class="site-header">
 
-               <button data-transition="snappy" id="menu-toggle">
-                  <i class="fa fa-bars"></i>
-               </button>
+
             <img src="" alt="P Logo" class="logo"/>
 
          </header> <!-- .site-header -->
@@ -214,8 +214,8 @@
          <button type="submit" class="btn-contact">Send</button>
       </form>
    </section> <!-- /#Contact -->
-</div><!-- /.site-content -->
-</div><!-- /#site-canvas -->
+</div><!-- /#content -->
+
 </div><!-- /#site-wrapper -->
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
