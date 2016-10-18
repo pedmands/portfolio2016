@@ -1,6 +1,6 @@
 .lander-wrap {
    background: url('assets/img/header.png');
-   background-position: left bottom;
+   background-position: right bottom;
 }
 #home {
    position: relative;
@@ -34,4 +34,7 @@
       position: absolute;
       bottom: 0;
    }
+}// #home
+#resume {
+  background-color: #444444;
 }

@@ -1,11 +1,26 @@
 #menu-toggle {
-   background: none;
+  padding:0;
+   background: transparent;
    border: none;
    box-shadow: none;
    text-shadow: none;
+   text-align: center;
    font-size: 30px;
-   padding:20px 30px;
 }
-#content.faded {
-   opacity: .65;
+.fa-bars {
+  &::before {
+  color: #de638c;
+  text-shadow: -2px 2px 0 #252525;
+  }
+}
+.logo {
+  position: fixed;
+  top:10px;
+  right:0;
+  height: 60px;
+  width:60px;
+  z-index: 101;
+  .logo-img {
+    height: 45px;
+  }
 }
