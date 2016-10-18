@@ -5,7 +5,6 @@
 }
 #content {
    width:100%;
-   height: 5000px;
    overflow: hidden;
    transition: all .4s ease-in;
   -webkit-transform: translateX(0);
@@ -23,14 +22,15 @@
   -webkit-transform: translate3d(300px, 0, 0);
 }
 #menu {
-   transition: all .4s ease-in;
+  background: url('assets/img/header.png');
+  background-position: right bottom;
+  transition: all .4s ease-in;
 	width: 300px;
-   height: 100%;
 	position: fixed;
 	left: -300px;
 	top: 0;
-   overflow: visible;
-   z-index:100;
+  overflow: visible;
+  z-index:100;
 }
 #menu.open {
    left:0;

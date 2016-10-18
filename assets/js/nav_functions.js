@@ -1,23 +1,5 @@
 $(document).ready(function() {
 
-// Sticky Navigation
-var nb = $(".navbar");
-nbs = "stickynav";
-sb = $(".site-branding").height();
-sc = $(".site-content");
-nbb = $(".navbar-brand");
-$(window).scroll(function() {
-	if( $(this).scrollTop() > sb ) {
-		nb.addClass(nbs);
-		sc.css({'margin-top' : '50px'});
-		nbb.css({'opacity' : '1'});
-	} else {
-		nb.removeClass(nbs);
-		sc.css({'margin-top' : '0'});
-		nbb.css({'opacity' : '0'});
-	}
-});
-
 // Nav Highlighting
 $(window).scroll(function(){
 
@@ -60,15 +42,10 @@ $('a[href*=#]:not([href=#])').click(function() {
    }
 });
 
-// Tab Functions
-$('ul.tabs li').click(function(){
-	var tab_id = $(this).attr('data-tab');
-
-	$('ul.tabs li').removeClass('current');
-	$('.tab-content').removeClass('current');
-
+// Tab navigation
+$('#resume-tabs li a').click(function(){
+	$('#resume-tabs li a').removeClass('current');
 	$(this).addClass('current');
-	$("#"+tab_id).addClass('current');
 });
 
 }); // $(document).ready

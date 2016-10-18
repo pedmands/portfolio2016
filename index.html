@@ -10,7 +10,7 @@
 <body>
    <div id="site-wrapper">
 
-       <div id="menu">
+       <div id="menu" class="fullheight">
           <button data-button='{"func": "snap-out"}' id="menu-toggle">
              <i class="fa fa-bars"></i>
           </button>
@@ -30,22 +30,24 @@
 
 <div id="content">
       <div class="lander-wrap fullheight">
-      <section id="home" class="fullheight">
+      <main id="home" class="fullheight">
          <div class="cover-letter">
+           <div class="letter-content">
             <h1 id="dear-john">To Whom it may concern,</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo quasi dignissimos ipsa, ab nobis cumque, quas incidunt, a odio vel modi! Sint, veniam, voluptatem aperiam commodi consectetur officiis culpa animi!</p>
-            <h2 id="sincerely">Sincerely,</h2>
+            <p><span class="dropcap">L</span>orem ipsum dolor sit amet, consectetur adipisicing elit. Nemo quasi dignissimos ipsa, ab nobis cumque, quas incidunt, a odio vel modi! Sint, veniam, voluptatem aperiam commodi consectetur officiis culpa animi!</p>
             <div class="signature">
+              <h2 id="sincerely">Sincerely,</h2>
                <div class="sig-box">
                   <span style="text-decoration:underline;margin-top:25px;">&nbsp;&nbsp;&nbsp;Signature.svg&nbsp;&nbsp;&nbsp;</span>
                </div>
                <h3>Preston Edmands</h3>
-               <h4>10/16/2016</h4>
+               <h4 id="date"></h4>
             </div> <!-- signature -->
-            <button class="nav-down"></button>
+            <button class="nav-down fa fa-angle-down"></button>
+          </div><!-- /.letter-content -->
          </div> <!-- cover-letter -->
          <div class="dark-bar"></div>
-      </section> <!-- #home -->
+      </main> <!-- #home -->
       </div> <!-- /.lander-wrap -->
 
    <section id="resume">
@@ -54,22 +56,22 @@
       </header>
 
 		<div class="tab-container">
-			<ul id="resume-tabs">
-            <li class="resume-label" data-tab="experience">Experience</li>
-            <li class="resume-label" data-tab="qualifications">Qualifications</li>
-            <li class="resume-label" data-tab="software">Software</li>
-            <li class="resume-label" data-tab="languages">Languages</li>
+			<ul class="tabs" id="resume-tabs">
+            <li class="label current"><a data-tab="experience">Experience</a></li>
+            <li class="label"><a data-tab="qualifications">Qualifications</a></li>
+            <li class="label"><a data-tab="software">Software</a></li>
+            <li class="label"><a data-tab="languages">Languages</a></li>
 			</ul><!-- .resume-tabs -->
-         <div id="experience">
+         <div id="experience" class="tab-content current">
             experience content
          </div>
-         <div id="qualifications">
+         <div id="qualifications" class="tab-content">
             qualifications content
          </div>
-         <div id="software">
+         <div id="software" class="tab-content">
             software content
          </div>
-         <div id="languages">
+         <div id="languages" class="tab-content">
             languages content
          </div>
       </div> <!-- .tab-container -->

@@ -1,3 +1,8 @@
+section {
+  padding:80px;
+  padding-top:100px;
+  text-align: center;
+}
 .lander-wrap {
    background: url('assets/img/header.png');
    background-position: right bottom;
@@ -5,10 +10,13 @@
 #home {
    position: relative;
    height: 600px; //simulating doc height
+
    .cover-letter {
+      .letter-content { height: 100%; position: relative;}
       h1,h2,h3,h4 {font-family: 'Noto Serif';text-transform: none;}
       background-color: #fff;
-      margin: 16px calc(50% - 300px);
+      margin: 16px calc(50% - 300px); //width 600px
+      height:75%;
       padding: 32px;
       position:absolute;
       bottom: 25px;
@@ -25,7 +33,38 @@
       }
       .signature {
          text-align: right;
+         position: absolute;
+         bottom:15px;
+         right:0;
+         .sig-box {
+           padding-top:30px;
+         }
+         #date {
+           font-style: italic;
+         }
+      }// .signature
+      .nav-down {
+        padding: 0;
+        font-size: 50px;
+        background: none;
+        border: none;
+        box-shadow: none;
+        position: absolute;
+        bottom: -30px;
+        width: 100%;
+        text-align: center;
       }
+      .dropcap {
+        float: left;
+        color: #999;
+        font-size: 75px;
+        line-height: 60px;
+        padding-top: 4px;
+        padding-right: 8px;
+        padding-left: 3px;
+        font-weight: 400;
+        font-family: 'Oswald';
+      }//dropcap
    }// .cover-letter
    .dark-bar {
       width: 100%;
@@ -37,4 +76,15 @@
 }// #home
 #resume {
   background-color: #444444;
+  color: #fff;
+
+}
+#social-1 {
+  background-color: #252525;
+  text-align: center;
+  color: #444444;
+  font-size: 60px;
+  i {
+    margin: 0 100px;
+  }
 }

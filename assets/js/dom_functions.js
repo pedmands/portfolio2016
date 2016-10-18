@@ -11,4 +11,12 @@ $(window).resize(function() {
   navHover();
 });
 
+// Insert current date into signature portion of Cover letter
+var currentdate = new Date();
+var datetime = (currentdate.getMonth()+1) + "/"
+							+currentdate.getDate() + "/"
+              + currentdate.getFullYear();
+$('#date').append(datetime);
+
+
 });
