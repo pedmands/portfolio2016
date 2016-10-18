@@ -16,20 +16,22 @@ $(document).ready(function() {
   var datetime = (currentdate.getMonth()+1)+"/"+currentdate.getDate()+"/"+currentdate.getFullYear();
   $('#date').append(datetime);
 
-// Tab navigation
-$('#resume-tabs li a').click(function(){
-	$('#resume-tabs li a').removeClass('current');
-	$(this).addClass('current');
-});
+  // Toggle off-canvas nav on click
+  $('#menu-toggle').click(function() {
+      var transition = $.parseJSON($(this).attr('data-button'));
+      $('#content').addClass(transition);
+      $('#site-wrapper').toggleClass('show-nav');
+      $('#menu').toggleClass('open');
+      $('#content').toggleClass('faded');
+    return false;
+  });
 
-// Toggle of-canvas nav on click
-$('#menu-toggle').click(function() {
-    var transition = $.parseJSON($(this).attr('data-button'));
-    $('#content').addClass(transition);
-    $('#site-wrapper').toggleClass('show-nav');
-    $('#menu').toggleClass('open');
-    $('#content').toggleClass('faded');
-  return false;
-});
+  // Resume Tab navigation
+  $('.resume-tab-label').click(function(){
+    var whichTab = $(this).attr('data-tab');
+    $('.resume-tab-content').removeClass('current');
+    $("#" + whichTab).addClass('current');
+  });
+
 
 }); // $(document).ready
