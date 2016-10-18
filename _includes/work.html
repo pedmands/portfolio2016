@@ -9,12 +9,12 @@
       <div id="all">
          <div class="thumb-container">
             <ul id="work-thumbs">
-               <li class="thumb">IMG</li>
-               <li class="thumb">IMG</li>
-               <li class="thumb">IMG</li>
-               <li class="thumb">IMG</li>
-               <li class="thumb">IMG</li>
-               <li class="thumb">IMG</li>
+              {% for portfolio_item in site.portfolio %}
+              {{ portfolio_item.var1 }}
+              	{{ portfolio_item.var2 }}
+              {{ portfolio_item.var3 }}
+              	{{ portfolio_item.var4 }}
+              	{% endfor %}
             </ul>
          </div><!-- .thumb-container -->
       </div>

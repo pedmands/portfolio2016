@@ -1,6 +1,6 @@
 ---
-var1: Title1
-var2: Image1
+title: Film Maker
+img: 
 var3: Category1
 var4: URL1
 ---

@@ -1,7 +1,9 @@
 section {
-  padding:80px;
-  padding-top:100px;
+  padding:0 50px;
   text-align: center;
+  .section-title {
+    padding-top: 80px;
+  }
 }
 .lander-wrap {
    background: url('assets/img/header.png');
@@ -9,8 +11,6 @@ section {
 }
 #home {
    position: relative;
-   height: 600px; //simulating doc height
-
    .cover-letter {
       .letter-content { height: 100%; position: relative;}
       h1,h2,h3,h4 {font-family: 'Noto Serif';text-transform: none;}
@@ -77,8 +77,96 @@ section {
 #resume {
   background-color: #444444;
   color: #fff;
-
-}
+  padding-bottom:60px;
+  #exp {
+    #experience {
+      display: block;
+      margin: 0 auto;
+      section {
+        display: inline-block;
+        width: 400px;
+        padding: 0;
+        padding-bottom: 30px;
+        h3 {
+          font-size: 30px;
+          text-align: left;
+          border-bottom: 2px solid #ffcc00;
+        }// h3
+        .company {
+          text-align: left;
+          display: block;
+          font-style: italic;
+          font-weight: 600;
+        }// .company
+        h4 {
+          font-style: italic;
+          font-weight: 400;
+          text-align: left;
+          text-transform: none;
+          margin-bottom: 20px;
+          .location{
+            display: inline-block;
+            &:after {
+              content: '/';
+              display: inline-block;
+              margin: 0 5px;
+            }
+          }// .location
+        }// h4
+        ul{
+          text-align: left;
+          margin-left: 25px;
+          list-style-type:  square;
+        }
+      }// #experience section
+    }// #experience
+  }// #exp
+  #qualifications,#software,#languages {
+    section{
+      max-width: 900px;
+      margin: 0 auto;
+      ul{
+        text-align: left;
+        font-size: 20px;
+        li {
+          margin: 15px 0;
+          &:before {
+            font-family: FontAwesome;
+            font-size: 16px;
+            color: #ffcc00;
+            margin-right: 15px;
+          }// li:before
+          a {
+            color: #ffcc00;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }// li a
+        }// li
+      }//ul
+    }//section
+  } // #qualifications, #software
+  #qualifications section ul li:before {
+    content: '\f046';
+  }
+  #software section ul li.bar-1:before,
+    #languages section ul li.bar-1:before {
+    content: '\f243';
+  }
+  #software section ul li.bar-2:before,
+    #languages section ul li.bar-2:before {
+    content: '\f242';
+  }
+  #software section ul li.bar-3:before,
+    #languages section ul li.bar-3:before {
+    content: '\f241';
+  }
+  #software section ul li.bar-4:before,
+    #languages section ul li.bar-4:before {
+    content: '\f240';
+  }
+}// #resume
 #social-1 {
   background-color: #252525;
   text-align: center;
@@ -87,4 +175,7 @@ section {
   i {
     margin: 0 100px;
   }
+}
+#work {
+  background-color: #969696;
 }

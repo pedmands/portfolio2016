@@ -31,6 +31,8 @@ $(document).ready(function() {
     var whichTab = $(this).attr('data-tab');
     $('.resume-tab-content').removeClass('current');
     $("#" + whichTab).addClass('current');
+    $('.resume-tab-label').removeClass('current');
+    $(this).addClass('current');
   });
 
 

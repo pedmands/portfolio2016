@@ -1,3 +1,7 @@
+.tab-container {
+  position:relative;
+  width:100%;
+}
 .resume-tab-label {
   color: #fff;
   padding: 8px 32px;
@@ -5,6 +9,7 @@
   background: none;
   box-shadow: none;
   border: none;
+  font-size: 16px;
   text-shadow: none;
   text-transform: uppercase;
   &:hover {
