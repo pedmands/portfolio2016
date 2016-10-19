@@ -35,5 +35,42 @@ $(document).ready(function() {
     $(this).addClass('current');
   });
 
+// Masonry Settings
+// setting default for RESUME section:
+$('#experience').masonry({
+  itemSelector: 'section',
+  columnWidth: 'section',
+  gutter: 40,
+  isFitWidth: true,
+  isAnimated: true
+});
+// Resume Tab Listener for Masonry
+$('#resume button').click(function(){
+var whichTab = $(this).attr('data-tab');
+if (whichTab === 'languages'){
+  $('.resume-languages').masonry({
+    itemSelector: 'li',
+    gutter: 10,
+    isFitWidth: true,
+    isAnimated: true
+  });
+} else if (whichTab==='software'){
+  $('.resume-software').masonry({
+    itemSelector: 'li',
+    gutter: 10,
+    isFitWidth: true,
+    isAnimated: true
+  });
+} else {
+  $('#experience').masonry({
+    // options
+    itemSelector: 'section',
+    columnWidth: 'section',
+    gutter: 40,
+    isFitWidth: true,
+    isAnimated: true
+  });
+}// if else
+});
 
 }); // $(document).ready
