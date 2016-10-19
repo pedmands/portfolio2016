@@ -29,8 +29,10 @@ $(document).ready(function() {
   // Resume Tab navigation
   $('.resume-tab-label').click(function(){
     var whichTab = $(this).attr('data-tab');
-    $('.resume-tab-content').removeClass('current');
-    $("#" + whichTab).addClass('current');
+    var currentTab = document.getElementsByClassName("open-tab");
+    $(currentTab).fadeToggle(300).removeClass('open-tab');
+    $("#" + whichTab).fadeToggle(500);
+    $("#" + whichTab).addClass('open-tab');
     $('.resume-tab-label').removeClass('current');
     $(this).addClass('current');
   });

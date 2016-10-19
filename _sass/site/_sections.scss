@@ -88,10 +88,11 @@ section {
         padding: 0;
         padding-bottom: 30px;
         h3 {
+          @include thickUnderline(#252525,#444444);
+          font-family: Ampersand, 'Source Sans Pro';
           font-size: 30px;
           line-height: 30px;
           text-align: left;
-          border-bottom: 2px solid #ffcc00;
           text-transform: none;
         }// h3
         .company {
@@ -157,6 +158,29 @@ section {
     content: '\f046';
   }
   #software, #languages {
+    .stars {
+      display: block;
+      color: #ffcc00;
+      .fa-star.dark {
+        color: #050505;
+        position: relative;
+      }
+      .fa.fa-star-half {
+        z-index: 100;
+      }
+      .star-half {
+        z-index:0;
+        &:before {
+          font-family: FontAwesome;
+          content: '\f089';
+          color: #ffcc00;
+          font-size: 100%;
+          position: absolute;
+          left: 0;
+
+        }
+      }
+    }
     margin: 0 auto;
     width:100%;
     max-width: 900px;
@@ -181,12 +205,6 @@ section {
         -webkit-box-shadow: inset 0 1px 10px rgba(0,0,0,0.5),0 1px 0 rgba(255,255,255,0.5),0 -1px 0 rgba(0,0,0,0.5);
         -moz-box-shadow: inset 0 1px 10px rgba(0,0,0,0.3),0 1px 0 rgba(255,255,255,0.1),0 -1px 0 rgba(0,0,0,0.5);
         box-shadow: inset 0 1px 10px rgba(0,0,0,0.3),0 1px 0 rgba(255,255,255,0.1),0 -1px 0 rgba(0,0,0,0.5);
-        &:after {
-          font-family: FontAwesome;
-          font-size: 2rem;
-          color: #ffcc00;
-          margin-left: 1rem;
-        }// li:before
         a {
           color: #ffcc00;
           text-decoration: none;
@@ -197,22 +215,7 @@ section {
       }// li
     }//ul
   }// #software, #languages
-  #software ul li.bar-1:after,
-    #languages ul li.bar-1:after {
-    content: '\f243';
-  }
-  #software ul li.bar-2:after,
-    #languages ul li.bar-2:after {
-    content: '\f242';
-  }
-  #software ul li.bar-3:after,
-    #languages ul li.bar-3:after {
-    content: '\f241';
-  }
-  #software ul li.bar-4:after,
-    #languages ul li.bar-4:after {
-    content: '\f240';
-  }
+
 }// #resume
 #social-1 {
   background-color: #252525;

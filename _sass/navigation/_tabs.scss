@@ -32,6 +32,7 @@
 }
 .resume-tab-content {
   display: none;
+  transition: all .5s ease-out;
 }
 .resume-tab-content.current {
   display: block;

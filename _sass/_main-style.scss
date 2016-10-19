@@ -1,6 +1,9 @@
 
 /*//////// Table of Contents ////////
 *
+* 0.0 Variables & Mixins
+*   0.1 Variables
+*   0.2 Mixins
 *	1.0 Normalize
 *		1.1 Reset
 *		1.2 Rebuild
@@ -25,7 +28,12 @@
 *   5.1 Captions
 *	  5.2 Galleries
 *   5.3 Images
+*
 */
+/*//////// 0.1 Variables ////////*/
+@import "variables/vars";
+/*//////// 0.2 Mixins ////////*/
+@import "mixins/mixins";
 
 /*//////// 1.0 Normalize ////////*/
 @import "normalize/normalize";
@@ -35,9 +43,6 @@
 
 /*//////// 3.0 Site Content ////////*/
 @import "site/site";
-
-/*//////// 4.0 Variables ////////*/
-@import "variables/vars";
 
 /*//////// 5.0 Media ////////*/
 @import "media/media";

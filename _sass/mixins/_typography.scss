@@ -1,0 +1,14 @@
+@font-face {
+  font-family: Ampersand;
+  src: local('Baskerville-Italic'),
+        local('GoudyOldStyleT-Italic'),
+        local('Palatino-Italic'),
+        local('BookAntiqua-Italic');
+        unicode-range: U+26;
+}
+@mixin thickUnderline($color: #ffcc00,$background: #444444){
+  background: linear-gradient($color, $color) no-repeat;
+  background-size: 100% 5px;
+  background-position: bottom;
+  text-shadow: 2px 2px $background, -2px 2px $background;
+}
