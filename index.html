@@ -1,33 +1,12 @@
 ---
+ layout: default
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Portfolio 2016</title>
-   <link rel="stylesheet" href="style.css" media="screen" title="main styles">
-</head>
-<body>
- <div id="site-wrapper">
-{% include menu.html %}
-  <div id="content">
-    {% include lander.html %}
-    {% include resume.html %}
-    <aside id="social-1" class="social-media">
-      <i class="fa fa-github-square"></i><i class="fa fa-linkedin-square"></i><i class="fa fa-twitter-square"></i>
-    </aside>
-    {% include work.html %}
-    {% include about_me.html %}
-    {% include clients.html %}
-    {% include contact.html %}
-  </div><!-- /#content -->
-</div><!-- /#site-wrapper -->
-
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-<script src="assets/js/portfolio_functions.js"></script>
-<script src="assets/js/masonry.min.js"></script>
-<script src="assets/js/masonry_settings.js"></script>
-</body>
-</html>
+{% include lander.html %}
+{% include resume.html %}
+<aside id="social-1" class="social-media">
+  <i class="fa fa-github-square"></i><i class="fa fa-linkedin-square"></i><i class="fa fa-twitter-square"></i>
+</aside>
+{% include work.html %}
+{% include about_me.html %}
+{% include clients.html %}
+{% include contact.html %}

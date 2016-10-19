@@ -121,14 +121,16 @@ section {
       }// #experience section
     }// #experience
   }// #exp
-  #qualifications,#software,#languages {
+  #qualifications {
     section{
       max-width: 900px;
       margin: 0 auto;
       ul{
+        width:100%;
         text-align: left;
         font-size: 20px;
         li {
+          display: inline-block;
           margin: 15px 0;
           &:before {
             font-family: FontAwesome;
@@ -146,24 +148,49 @@ section {
         }// li
       }//ul
     }//section
-  } // #qualifications, #software
+  } // #qualifications
   #qualifications section ul li:before {
     content: '\f046';
   }
-  #software section ul li.bar-1:before,
-    #languages section ul li.bar-1:before {
+  #software, #languages {
+    margin: 0 auto;
+    ul{
+      width:100%;
+      text-align: left;
+      font-size: 20px;
+      li {
+        display: inline-block;
+        margin: 15px 0;
+        &:before {
+          font-family: FontAwesome;
+          font-size: 16px;
+          color: #ffcc00;
+          margin-right: 15px;
+        }// li:before
+        a {
+          color: #ffcc00;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }// li a
+      }// li
+    }//ul
+  }// #software, #languages
+  #software ul li.bar-1:before,
+    #languages ul li.bar-1:before {
     content: '\f243';
   }
-  #software section ul li.bar-2:before,
-    #languages section ul li.bar-2:before {
+  #software ul li.bar-2:before,
+    #languages ul li.bar-2:before {
     content: '\f242';
   }
-  #software section ul li.bar-3:before,
-    #languages section ul li.bar-3:before {
+  #software ul li.bar-3:before,
+    #languages ul li.bar-3:before {
     content: '\f241';
   }
-  #software section ul li.bar-4:before,
-    #languages section ul li.bar-4:before {
+  #software ul li.bar-4:before,
+    #languages ul li.bar-4:before {
     content: '\f240';
   }
 }// #resume
