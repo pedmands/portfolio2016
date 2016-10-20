@@ -112,4 +112,37 @@ $('.project-title').text(newTitle);
 }
 workLoad();
 
+function resumeStuff(){
+
+  $('.resume-unit').first().addClass('active-tab');
+  $('.resume-tab').first().addClass('active-tab');
+
+  $('.resume-tab').click(function(){
+    var $this = $(this),
+        $siblings = $this.parent().children(),
+        position = $siblings.index($this);
+
+        $('.resume-unit').removeClass('active-tab').eq(position).addClass('active-tab');
+        $siblings.removeClass('active-tab');
+        $this.addClass('active-tab');
+  });
+
+  $('.resume-control-next').click(function(){
+    var $this = $(this),
+    activeTab = $('.resume-belt').find('.active-tab'),
+    position = $('.resume-belt').children().index(activeTab),
+    tabCount = $('.resume-unit').length;
+
+    if(position < tabCount - 1){
+      $('.active-tab').removeClass('active-tab').next().addClass('active-tab');
+    } else {
+      $('.resume-unit').removeClass('active-tab').first().addClass('active-tab');
+      $('.resume-tab').removeClass('active-tab').first().addClass('active-tab');
+    }
+  });
+
+}
+resumeStuff();
+
+
 }); // $(document).ready
