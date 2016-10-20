@@ -2,20 +2,34 @@
    <header class="section-header">
       <h1 class="section-title">Work</h1>
    </header>
-    <button class="left-arr"></button>
-      <div class="work-wrapper">
-         <div class="thumb-container">
-          {% for project in site.data.settings.projects %}
-            <a href="" class="thumb-unit" style="background-image: url(/assets/img/work/{{project.folder}}/thumb.png)">
-              <span class="thumb-overlay">
-                <h3 class="thumb-title">{{ project.name }}</h3>
-                <i class="fa fa-search"></i>
-                <h4 class="thumb-cat">{{ project.category }}</h4>
-              </span>
-            </a>
-          {% endfor %}
-         </div><!-- .thumb-container -->
-       </div><!-- .work_wrapper -->
-       <button class="right-arr"></button>
+      <div class="work-belt">
+        <div class="thumb-wrap">
+          <div class="thumb-container">
+           {% for project in site.data.settings.projects %}
+             <div class="thumb-unit" data-folder="{{project.folder}}" style="background-image: url(/assets/img/work/{{project.folder}}/thumb.png)">
+               <span class="thumb-overlay">
+                 <h3 class="thumb-title">{{ project.name }}</h3>
+<img src="assets/img/frill.png" alt="Frill" class="frill">
+                 <h4 class="thumb-cat">{{ project.category }}</h4>
+
+               </span>
+             </div>
+           {% endfor %}
+          </div><!-- .thumb-container -->
+        </div>
+
+        <div class="work-wrap">
+          <div class="work-container">
+            <div class="work-title">
+              <i class="fa fa-chevron-circle-left work-return"></i><h4 class="project-title">Do Work</h4>
+            </div>
+            <div class="project-load">
+
+            </div>
+          </div> <!--  work-container -->
+        </div>
+
+
+       </div><!-- .work-belt -->
 <img src="assets/img/frill.png" alt="">
 </section><!-- #work -->

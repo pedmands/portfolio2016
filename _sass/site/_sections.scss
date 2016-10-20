@@ -245,18 +245,33 @@ section {
   background-color: #252525;
   text-align: center;
   color: #444444;
-  font-size: 60px;
   i {
-    margin: 0 100px;
+    margin: 2rem 9rem;
+    font-size: 6rem;
+    @include respond-to(tablet){margin: 2rem 4rem;}
+    @include respond-to(phone){margin: 2rem 3rem;}
+    @include respond-to(desktop){margin: 2rem 12rem;}
   }
 }
 #work {
   position: relative;
   background-color: #969696;
   padding-bottom: 5rem;
+  overflow-x:hidden;
+  padding:0;
+  .work-belt {
+    transition: all .4s ease-in;
+    width:200%;
+    position: relative;
+    left: 0;
+  }
+  .thumb-wrap,.work-wrap {
+    width:50%;
+    float: left;
+  }
   .section-title {color:#252525;}
   .thumb-container {
-    max-width:960px;
+    max-width:1024px;
     margin:0 auto;
     padding-bottom: 6rem;
     @include clearfix;
@@ -268,8 +283,7 @@ section {
       display: block;
       width: 25%;
       float:left;
-      margin: 0 -1px;
-      border: 1px solid #252525;
+      margin: 0;
       position: relative;
       padding-top: 14%;
       overflow: hidden;
@@ -286,6 +300,7 @@ section {
         padding-top: 17%;
       }
       .thumb-overlay {
+        cursor: pointer;
         text-align: center;
         transition: all .2s ease-out;
         position: absolute;
@@ -293,13 +308,12 @@ section {
         left:0;
         width:100%;
         height:100%;
-        background: rgba(#027a99,.8);
+        background: rgba(#333,.6);
         h3 {
           padding-top: 2.5rem;
           color: #fff;
           font-size: 1.75rem;
           line-height: 1.2;
-          
         }
         h4 {
           transition: all 1s ease-out;
@@ -309,10 +323,10 @@ section {
           font-style: italic;
           font-weight: 400;
           font-size: 1.75rem;
+          line-height: .85;
         }
-        i {
-          color: #bbb;
-          font-size: 3rem;
+        .frill {
+        width:50%;
         }
       }
       &:hover .thumb-overlay {
@@ -320,6 +334,38 @@ section {
       }
     }// .thumb-unit
   }// .thumb-container
+  .work-container {
+    max-width:600px;
+    margin:0 auto;
+    padding-bottom: 6rem;
+    position: relative;
+    display: none;
+    img {
+      max-width: 100%;
+      margin-bottom: 2rem;
+    }
+    .work-title {
+      text-align: left;
+    }
+    h4 {
+      display: inline-block;
+      color: #fff;
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+    }
+    i {
+      cursor: pointer;
+      display: inline-block;
+      font-size: 2.8rem;
+      color: #21b4da;
+      margin-right: 2rem;
+      margin-bottom:1rem;
+      vertical-align: middle;
+      &:hover {
+        color:#027a99;
+      }
+    }
+  }// .work-container
   .left-arr, .right-arr {
     height:100%;
     width: 8rem;
@@ -344,7 +390,7 @@ section {
     &:before {
       content: '\f104';
     }
-  }
+  }// .left-arr
   .right-arr {
     position: absolute;
     right: 6rem;
@@ -353,5 +399,7 @@ section {
     &:before {
       content: '\f105';
     }
-  }
+  }// .right-arr
+
+
 }// #work

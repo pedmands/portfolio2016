@@ -73,6 +73,34 @@ if (whichTab === 'languages'){
     isAnimated: true
   });
 }// if else
-});
+});// masonry
+
+function workBelt() {
+  $('.thumb-unit').click(function() {
+    $('.work-belt').css('left','-100%');
+    $('.work-container').fadeIn();
+  });
+  $('.work-return').click(function(){
+    $('.work-belt').css('left','0');
+    $('.work-container').fadeOut();
+  });
+}
+workBelt();
+
+// Load projects into work space
+function workLoad(){
+  $.ajaxSetup ({ cache: true });
+
+  $('.thumb-unit').click(function(){
+    var $this = $(this),
+        newTitle = $this.find('.thumb-title').text(),
+        newFolder = $this.data('folder'),
+        spinner = '<div class="loader">Loading...</div>',
+        newHTML = '/work/' + newFolder + '.html';
+    $('.project-load').html(spinner).load(newHTML);
+$('.project-title').text(newTitle);
+  });
+}
+workLoad();
 
 }); // $(document).ready
