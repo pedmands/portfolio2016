@@ -1,0 +1,9 @@
+@mixin blueprint-bg($bg: #269, $lines1: #fff, $lines2: #ccc){
+  background-color:$bg;
+  background-image: linear-gradient($lines2 2px, transparent 2px),
+  linear-gradient(90deg, $lines2 2px, transparent 2px),
+  linear-gradient(rgba($lines1,.3) 1px, transparent 1px),
+  linear-gradient(90deg, rgba($lines1,.3) 1px, transparent 1px);
+  background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}

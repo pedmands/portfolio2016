@@ -1,14 +1,23 @@
 $(document).html('<div class="loader">Loading...</div>').ready(function() {
 
   // set the height of any div with class 'fullheight' to viewport height.
-  var wheight = $(window).height();
-  $('.fullheight').css('height', wheight);
+  function fullHeight(){
+    var wHeight = $(window).height();
+    $('.fullheight').css('height', wHeight);
+  }
+  fullHeight();
 
-  // adjust height of .fullheight elements on window resize.
+  //set with width of elements with class 'fullwidth' to viewport width.
+  function fullWidth(){
+    var wWidth = $(window).width();
+    $('.fullwidth').css('width', wWidth);
+  }
+fullWidth();
+
+  // adjust height of .fullheight & .fullheight elements on window resize.
   $(window).resize(function() {
-  	wheight = $(window).height(); //get the height of the window
-  	$('.fullheight').css('height', wheight); //set to window tallness
-    navHover();
+  	fullWidth();
+    fullHeight();
   });
 
   // Insert current date into signature portion of Cover letter
@@ -26,16 +35,16 @@ $(document).html('<div class="loader">Loading...</div>').ready(function() {
     return false;
   });
 
-  // Resume Tab navigation
-  $('.resume-tab-label').click(function(){
-    var whichTab = $(this).attr('data-tab');
-    var currentTab = document.getElementsByClassName("open-tab");
-    $(currentTab).fadeToggle(300).removeClass('open-tab');
-    $("#" + whichTab).fadeToggle(500);
-    $("#" + whichTab).addClass('open-tab');
-    $('.resume-tab-label').removeClass('current');
-    $(this).addClass('current');
-  });
+  // // Resume Tab navigation
+  // $('.resume-tab-label').click(function(){
+  //   var whichTab = $(this).attr('data-tab');
+  //   var currentTab = document.getElementsByClassName("open-tab");
+  //   $(currentTab).fadeToggle(300).removeClass('open-tab');
+  //   $("#" + whichTab).fadeToggle(500);
+  //   $("#" + whichTab).addClass('open-tab');
+  //   $('.resume-tab-label').removeClass('current');
+  //   $(this).addClass('current');
+  // });
 
 // Masonry Settings
 // setting default for RESUME section:
