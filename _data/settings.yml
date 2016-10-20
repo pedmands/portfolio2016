@@ -1,0 +1,11 @@
+#---------------------
+#Work section
+projects:
+  - {name: Chirply, category: Ruby on Rails, folder: 'proj-1'}
+  - {name: CrossFit KGB, category: Web Design, folder: 'proj-2'}
+  - {name: FilmMaker, category: WordPress, folder: 'proj-3'}
+  - {name: Landon Hotel, category: Web Design, folder: 'proj-4'}
+  - {name: ReDeSign, category: Graphic Design, folder: 'proj-5'}
+  - {name: Survivor Speak, category: Graphic Design, folder: 'proj-6'}
+  - {name: Topical Roots, category: WordPress, folder: 'proj-7'}
+  - {name: White Noise, category: WordPress, folder: 'proj-8'}

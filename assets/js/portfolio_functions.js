@@ -42,7 +42,7 @@ $(document).ready(function() {
 $('#experience').masonry({
   itemSelector: 'section',
   columnWidth: 'section',
-  gutter: 40,
+  gutter:25,
   isFitWidth: true,
   isAnimated: true
 });

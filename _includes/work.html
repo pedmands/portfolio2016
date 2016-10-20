@@ -2,60 +2,20 @@
    <header class="section-header">
       <h1 class="section-title">Work</h1>
    </header>
+    <button class="left-arr"></button>
       <div class="work-wrapper">
-         <button class="left-arr"></button>
          <div class="thumb-container">
-
-            <a href="" class="thumb-unit">
+          {% for project in site.data.settings.projects %}
+            <a href="" class="thumb-unit" style="background-image: url(/assets/img/work/{{project.folder}}/thumb.png)">
               <span class="thumb-overlay">
-                <strong>Film Maker</span></strong>
-                <span class="zoom-icon"></span>
+                <h3 class="thumb-title">{{ project.name }}</h3>
+                <i class="fa fa-search"></i>
+                <h4 class="thumb-cat">{{ project.category }}</h4>
               </span>
             </a>
-            <a href="" class="thumb-unit">
-              <span class="thumb-overlay">
-                <strong>Film Maker</span></strong>
-                <span class="zoom-icon"></span>
-              </span>
-            </a>
-            <a href="" class="thumb-unit">
-              <span class="thumb-overlay">
-                <strong>Film Maker</span></strong>
-                <span class="zoom-icon"></span>
-              </span>
-            </a>
-            <a href="" class="thumb-unit">
-              <span class="thumb-overlay">
-                <strong>Film Maker</span></strong>
-                <span class="zoom-icon"></span>
-              </span>
-            </a>
-            <a href="" class="thumb-unit">
-              <span class="thumb-overlay">
-                <strong>Film Maker</span></strong>
-                <span class="zoom-icon"></span>
-              </span>
-            </a>
-            <a href="" class="thumb-unit">
-              <span class="thumb-overlay">
-                <strong>Film Maker</span></strong>
-                <span class="zoom-icon"></span>
-              </span>
-            </a>
-            <a href="" class="thumb-unit">
-              <span class="thumb-overlay">
-                <strong>Film Maker</span></strong>
-                <span class="zoom-icon"></span>
-              </span>
-            </a>
-            <a href="" class="thumb-unit">
-              <span class="thumb-overlay">
-                <strong>Film Maker</span></strong>
-                <span class="zoom-icon"></span>
-              </span>
-            </a>
+          {% endfor %}
          </div><!-- .thumb-container -->
-         <button class="right-arr"></button>
        </div><!-- .work_wrapper -->
+       <button class="right-arr"></button>
 <img src="assets/img/frill.png" alt="">
 </section><!-- #work -->
