@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).html('<div class="loader">Loading...</div>').ready(function() {
 
   // set the height of any div with class 'fullheight' to viewport height.
   var wheight = $(window).height();
