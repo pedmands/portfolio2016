@@ -4,11 +4,11 @@
         local('GoudyOldStyleT-Italic'),
         local('Palatino-Italic'),
         local('BookAntiqua-Italic');
-        unicode-range: U+26;
+  unicode-range: U+26;
 }
 @mixin thickUnderline($color: #ffcc00,$background: #444444){
   background: linear-gradient($color, $color) no-repeat;
-  background-size: 100% 5px;
+  background-size: 100% 2px;
   background-position: bottom;
-  text-shadow: 2px 2px $background, -2px 2px $background;
+  text-shadow: 4px 0px $background, -4px 0px $background;
 }

@@ -80,44 +80,71 @@ section {
       bottom: 0;
    }
 }// #home
+
+
+// RESUME
 #resume {
-  background-color: #444444;
-  color: #fff;
-  padding-bottom:5rem;
+  transition: all 1s ease-out;
   position: relative;
-  #exp {
-    width:100%;
-    #experience {
-      display: block;
+  background-color: #444;
+  color: white;
+  height:100%;
+  min-height:65rem;
+  .section-header {
+    margin-bottom: 2rem;
+  }
+}
+.resume-belt {
+  @include no-select;
+  width:100%;
+  height:100%;
+  margin-top:2.5rem;
+  .resume-unit {
+    padding: 1em calc(50%-300px);
+    margin: 0 auto;
+    border-radius: 10px;
+    display: none;
+    &.active-tab {
+      display:block;
+      @include zoomIn(.3s);
+    }
+    .experience-grid {
+      max-width: 100rem;
       margin: 0 auto;
-      text-align: left;
-      section {
-        display: inline-block;
+      display:table;
+      table-layout: fixed;
+      .experience-unit {
+        display: table-cell;
+        padding: 0 1rem;
+        width:33%;
+        height:100%;
         text-align: left;
-        width: 325px;
-        margin-bottom: 3rem;
-        padding:0;
-        @media only screen and (max-width: $bp-laptop){
-          width:400px;
-        }
         h3 {
-          @include thickUnderline(#999999,#444444);
+          @include thickUnderline($yellow,#444444);
+          position: relative;
           font-family: Ampersand, 'Source Sans Pro';
-          font-size: 3rem;
-          line-height: 1;
-          text-align: left;
+          font-size: 3.5rem;
+
           text-transform: none;
           color:#efefef;
+
+          .amp {
+            font-size: 4rem;
+            vertical-align: bottom;
+            margin: 0 .25rem;
+          }
         }// h3
         .company {
+          font-size: 2rem;
           font-style: italic;
           color: #999999;
           font-weight: 600;
-          text-transform: uppercase;
+          // text-transform: uppercase;
         }// .company
         h4 {
-          display: inline-block;
+          display: block;
           font-style: italic;
+
           text-transform: none;
           margin-bottom: 1rem;
           color: #999999;
@@ -134,24 +161,22 @@ section {
           text-align: left;
           list-style-type:  none;
           line-height: 1.5;
+
           li {
             margin-bottom: 1rem;
             &:before {
               font-family: FontAwesome;
               content: '\f0c8';
               color:#ffcc00;
-              margin-right: 1.5rem;
+              margin-right: 1rem;
               vertical-align: middle;
               font-size: 1rem;
             }
-          }
-
-        }
-      }// #experience section
-    }// #experience
-  }// #exp
-  #qualifications {
-    section{
+          }// li
+        }// ul
+      }// .experience-unit
+    }// .experience-grid
+    .qualifications {
       max-width: 900px;
       margin: 0 auto;
       ul{
@@ -160,88 +185,152 @@ section {
         font-size: 1.8rem;
         font-family: "Noto Serif";
         li {
-          display: inline-block;
+          display: block;
           margin: 1.2rem 0;
           &:before {
             font-family: FontAwesome;
-            font-size: 1.5rem;
+            font-size: 2.25rem;
             color: #ffcc00;
             margin-right: 1.5rem;
+            content: '\f046';
           }// li:before
           a {
             color: #ffcc00;
+            @include thickUnderline($yellow, #444);
             text-decoration: none;
+          }// li a
+          [href^="http"]:not([href*="localhost"])::after {
+            display: inline-block;
+            width: 1em; height: 1em;
+            font-family: FontAwesome;
+            font-size: 1.5rem;
+            margin-left: .25rem;
+            padding-bottom: .5rem;
+            content: '\f08e';
+          }
+        }// li
+      }//ul
+    }// .qualifications
+
+    .software, .languages {
+      margin: 0 auto;
+      width:100%;
+      max-width: 900px;
+      .stars {
+        display: block;
+        color: #ffcc00;
+        .fa-star.dark {
+          color: #050505;
+          position: relative;
+        }
+        .fa.fa-star-half {
+          z-index: 100;
+        }
+        .star-half {
+          z-index:0;
+          &:before {
+            font-family: FontAwesome;
+            content: '\f089';
+            color: #ffcc00;
+            font-size: 100%;
+            position: absolute;
+            left: 0;
+
+          }
+        }//.star-half
+      }//.stars
+      ul{
+        text-align: center;
+        font-size: 2rem;
+        font-family: "Noto Serif";
+        margin: 0 auto;
+        color: #fff;
+        li {
+          display: inline-block;
+          width: 175px;
+          margin: 1rem 0;
+          padding: 1rem;
+          background-color: #252525;
+          max-width: 100%;
+          overflow-x: auto;
+          vertical-align: middle;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px;
+          -webkit-box-shadow: inset 0 1px 10px rgba(0,0,0,0.5),0 1px 0 rgba(255,255,255,0.5),0 -1px 0 rgba(0,0,0,0.5);
+          -moz-box-shadow: inset 0 1px 10px rgba(0,0,0,0.3),0 1px 0 rgba(255,255,255,0.1),0 -1px 0 rgba(0,0,0,0.5);
+          box-shadow: inset 0 1px 10px rgba(0,0,0,0.3),0 1px 0 rgba(255,255,255,0.1),0 -1px 0 rgba(0,0,0,0.5);
+          a {
+            color: #ffcc00;
             &:hover {
               text-decoration: underline;
             }
           }// li a
         }// li
       }//ul
-    }//section
-  } // #qualifications
-  #qualifications section ul li:before {
-    content: '\f046';
-  }
-  #software, #languages {
-    .stars {
-      display: block;
+    }// .software, .languages
+  }// resume-unit
+
+
+}// resume-belt
+.resume-tabs {
+  position: relative;
+  justify-content: center;
+  .resume-tab {
+    display: inline-block;
+    color: #fff;
+    background: none;
+    box-shadow: none;
+    border: none;
+    padding: .5rem 2rem;
+    margin: 2rem;
+    font-size: 1.8rem;
+    text-shadow: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    &.active-tab {
+      background-color: #2b2b2b;
       color: #ffcc00;
-      .fa-star.dark {
-        color: #050505;
-        position: relative;
-      }
-      .fa.fa-star-half {
-        z-index: 100;
-      }
-      .star-half {
-        z-index:0;
-        &:before {
-          font-family: FontAwesome;
-          content: '\f089';
-          color: #ffcc00;
-          font-size: 100%;
-          position: absolute;
-          left: 0;
-
-        }
-      }
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      -webkit-box-shadow: inset 0 1px 10px rgba(0,0,0,0.3),0 1px 0 rgba(255,255,255,0.1),0 -1px 0 rgba(0,0,0,0.5);
+      -moz-box-shadow: inset 0 1px 10px rgba(0,0,0,0.3),0 1px 0 rgba(255,255,255,0.1),0 -1px 0 rgba(0,0,0,0.5);
+      box-shadow: inset 0 1px 10px rgba(0,0,0,0.3),0 1px 0 rgba(255,255,255,0.1),0 -1px 0 rgba(0,0,0,0.5);
     }
-    margin: 0 auto;
-    width:100%;
-    max-width: 900px;
-    ul{
-      text-align: center;
-      font-size: 2rem;
-      font-family: "Noto Serif";
-      margin: 0 auto;
-      color: #fff;
-      li {
-        display: inline-block;
-        width: 175px;
-        margin: 1rem 0;
-        padding: 1rem;
-        background-color: #252525;
-        max-width: 100%;
-        overflow-x: auto;
-        vertical-align: middle;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-        -webkit-box-shadow: inset 0 1px 10px rgba(0,0,0,0.5),0 1px 0 rgba(255,255,255,0.5),0 -1px 0 rgba(0,0,0,0.5);
-        -moz-box-shadow: inset 0 1px 10px rgba(0,0,0,0.3),0 1px 0 rgba(255,255,255,0.1),0 -1px 0 rgba(0,0,0,0.5);
-        box-shadow: inset 0 1px 10px rgba(0,0,0,0.3),0 1px 0 rgba(255,255,255,0.1),0 -1px 0 rgba(0,0,0,0.5);
-        a {
-          color: #ffcc00;
-          text-decoration: none;
-          &:hover {
-            text-decoration: underline;
-          }
-        }// li a
-      }// li
-    }//ul
-  }// #software, #languages
+    &:hover {
+      box-shadow: none;
+      color: #ffcc00;
+    }
+  }// .resume-tab
+}// .resume-tabs
+.resume-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index:100;
+  transform: translateY(-50%);
+  .resume-control-prev {
+    position: absolute;
+    top:50%;
+    left: 2rem;
+  }
+  .resume-control-next {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+  }
+  .resume-control-prev,
+  .resume-control-next {
+    cursor: pointer;
+    &:before{font-family: FontAwesome; color: #ccc; font-size: 4rem;padding:3rem;}
+  }
+  .resume-control-prev:before {content: '\f104';}
+  .resume-control-next:before {content: '\f105';}
+}
+/// End RESUME
 
-}// #resume
+
 #social-1 {
   background-color: #252525;
   text-align: center;

@@ -35,54 +35,8 @@ fullWidth();
     return false;
   });
 
-  // // Resume Tab navigation
-  // $('.resume-tab-label').click(function(){
-  //   var whichTab = $(this).attr('data-tab');
-  //   var currentTab = document.getElementsByClassName("open-tab");
-  //   $(currentTab).fadeToggle(300).removeClass('open-tab');
-  //   $("#" + whichTab).fadeToggle(500);
-  //   $("#" + whichTab).addClass('open-tab');
-  //   $('.resume-tab-label').removeClass('current');
-  //   $(this).addClass('current');
-  // });
+// Isotope
 
-// Masonry Settings
-// setting default for RESUME section:
-$('#experience').masonry({
-  itemSelector: 'section',
-  columnWidth: 'section',
-  gutter:25,
-  isFitWidth: true,
-  isAnimated: true
-});
-// Resume Tab Listener for Masonry
-$('#resume button').click(function(){
-var whichTab = $(this).attr('data-tab');
-if (whichTab === 'languages'){
-  $('.resume-languages').masonry({
-    itemSelector: 'li',
-    gutter: 10,
-    isFitWidth: true,
-    isAnimated: true
-  });
-} else if (whichTab==='software'){
-  $('.resume-software').masonry({
-    itemSelector: 'li',
-    gutter: 10,
-    isFitWidth: true,
-    isAnimated: true
-  });
-} else {
-  $('#experience').masonry({
-    // options
-    itemSelector: 'section',
-    columnWidth: 'section',
-    gutter: 40,
-    isFitWidth: true,
-    isAnimated: true
-  });
-}// if else
-});// masonry
 
 function workBelt() {
   $('.thumb-unit').click(function() {
@@ -127,18 +81,29 @@ function resumeStuff(){
         $this.addClass('active-tab');
   });
 
-  $('.resume-control-next').click(function(){
+  $('.resume-control-next, .resume-control-prev').click(function(){
     var $this = $(this),
     activeTab = $('.resume-belt').find('.active-tab'),
     position = $('.resume-belt').children().index(activeTab),
     tabCount = $('.resume-unit').length;
+    if($this.hasClass('resume-control-next')){
 
-    if(position < tabCount - 1){
-      $('.active-tab').removeClass('active-tab').next().addClass('active-tab');
+      if(position < tabCount -1){
+        $('.active-tab').removeClass('active-tab').next().addClass('active-tab');
+      } else {
+        $('.resume-unit').removeClass('active-tab').first().addClass('active-tab');
+        $('.resume-tab').removeClass('active-tab').first().addClass('active-tab');
+      }
     } else {
-      $('.resume-unit').removeClass('active-tab').first().addClass('active-tab');
-      $('.resume-tab').removeClass('active-tab').first().addClass('active-tab');
+
+      if(position === 0){
+        $('.resume-unit').removeClass('active-tab').last().addClass('active-tab');
+        $('.resume-tab').removeClass('active-tab').last().addClass('active-tab');
+      } else {
+        $('.active-tab').removeClass('active-tab').prev().addClass('active-tab');
+      }
     }
+
   });
 
 }

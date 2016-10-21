@@ -7,3 +7,9 @@
     clear: both;
     height: 0;}
 }
+
+@mixin no-select{
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
