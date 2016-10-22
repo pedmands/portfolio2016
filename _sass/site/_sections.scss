@@ -5,10 +5,10 @@ section {
     padding:0;
   }
   .section-title {
-    padding-top: 80px;
+    padding-top: 6rem;
   }
   .section-header {
-    margin-bottom: 50px;
+    margin-bottom: 5rem;
   }
 }
 .lander-wrap {
@@ -81,7 +81,6 @@ section {
    }
 }// #home
 
-
 // RESUME
 #resume {
   transition: all 1s ease-out;
@@ -123,19 +122,17 @@ section {
           @include thickUnderline($yellow,#444444);
           position: relative;
           font-family: Ampersand, 'Source Sans Pro';
-          font-size: 3.5rem;
-
+          font-size: 2.5rem;
           text-transform: none;
           color:#efefef;
-
           .amp {
-            font-size: 4rem;
+            font-size: 2.5rem;
             vertical-align: bottom;
             margin: 0 .25rem;
           }
         }// h3
         .company {
-          font-size: 2rem;
+          font-size: 1.5rem;
           font-style: italic;
           color: #999999;
           font-weight: 600;
@@ -144,7 +141,6 @@ section {
         h4 {
           display: block;
           font-style: italic;
-
           text-transform: none;
           margin-bottom: 1rem;
           color: #999999;
@@ -152,7 +148,7 @@ section {
             &:after {
               content: '/';
               display: inline-block;
-              margin-left:5px;
+              margin-left:.75rem;
             }
           }// .location
         }// h4
@@ -164,6 +160,7 @@ section {
 
           li {
             margin-bottom: 1rem;
+            font-size: .9em;
             &:before {
               font-family: FontAwesome;
               content: '\f0c8';
@@ -187,9 +184,10 @@ section {
         li {
           display: block;
           margin: 1.2rem 0;
+          font-size: .9em;
           &:before {
             font-family: FontAwesome;
-            font-size: 2.25rem;
+            font-size: 1em;
             color: #ffcc00;
             margin-right: 1.5rem;
             content: '\f046';
@@ -241,15 +239,15 @@ section {
       }//.stars
       ul{
         text-align: center;
-        font-size: 2rem;
+        font-size: 1em;
         font-family: "Noto Serif";
         margin: 0 auto;
         color: #fff;
         li {
           display: inline-block;
-          width: 175px;
+          width: 12rem;
           margin: 1rem 0;
-          padding: 1rem;
+          padding: .5em;
           background-color: #252525;
           max-width: 100%;
           overflow-x: auto;
@@ -330,7 +328,6 @@ section {
 }
 /// End RESUME
 
-
 #social-1 {
   background-color: #252525;
   text-align: center;
@@ -343,12 +340,16 @@ section {
     @include respond-to(desktop){margin: 2rem 12rem;}
   }
 }
+
 #work {
   position: relative;
   background-color: #969696;
   padding-bottom: 5rem;
   overflow-x:hidden;
   padding:0;
+  img {
+    padding-bottom: 5rem;
+  }
   .work-belt {
     transition: all .4s ease-in;
     width:200%;
@@ -493,3 +494,35 @@ section {
 
 
 }// #work
+
+#about {
+  background: #efefef;
+  padding: 0 calc(50% - 505px);
+  h1 {
+    color:#444;
+  }
+  .face-lockup {
+    margin: 0 auto;
+    .face-image {
+      display: inline-block;
+      height: 200px;
+      width: 200px;
+      margin: 0 3rem;
+      background: url(/assets/img/face.png);
+      background-position: left top;
+    }
+  }// .face-lockup
+  .icon {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid #464646;
+    background-color: #969696;
+    margin:3rem;
+
+  }// .icon
+}// #about
