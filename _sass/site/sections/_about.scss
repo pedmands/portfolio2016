@@ -1,7 +1,26 @@
 #about {
+  transition: all .5s ease-in-out;
   text-align: left;
   background: #efefef;
-  padding: 0 calc(50% - 505px);
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+  &.toggled {
+    background-color: #ddd;
+  }
+  .bio-belt {
+    @include clearfix;
+    transition: all .4s ease-out;
+    width:200%;
+    transform: translateX(0%);
+    &.toggled {
+      transform: translateX(-50%);
+    }
+  }
+  aside {
+    float: left;
+    width: 50%;
+  }
   h1 {
     color:#444;
   }
@@ -23,15 +42,29 @@
     }
   }// .face-lockup
   [class^="icon-"]{
-    overflow: hidden;
-    path {
-      fill: #464646;
-    }
     height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    border: 3px solid #464646;
-    background-color: #969696;
+    width: 150px;
+    text-align: center;
+    path {
+      fill: #555;
+    }
+    .path {
+      overflow: hidden !important;
+      overflow-y: hidden;
+      margin: 0 auto;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      background-color: $orange;
+      border: 1px solid #ddd;
+    }// .path
+    strong {
+      display: block;
+      text-transform: uppercase;
+      color: #555;
+      font-weight: normal;
+      font-size: 1.5rem;
+    }
     &.icon-keyboard {
       order: 1;
     }
@@ -45,28 +78,79 @@
       order: 5;
     }
   } // .icon-*
+  .blurb {
+    margin: 0 auto;
+    max-width: 60rem;
+    padding: 1rem;
+    font-size: 1.75rem;
+  }// .blurb
+  .about-toggle-box {
+    display: block;
+    text-align: center;
+    margin: 3rem auto;
+    .about-toggle {
+      box-shadow: none;
+      border: none;
+      background: none;
+      vertical-align: middle;
+      width: 85px;
+      height:55px;
+      padding: 0;
+      overflow: hidden;
+      svg {
+        transform: scale(.75);
+        fill: #969696;
+        overflow: hidden;
+        width:85px;
+        height:55px;
+      }
+      &.toggled {
+        transform: rotate(180deg);
+      }
+    }// .about-toggle
+    [class^='toggle-']{
+      width: 80px;
+      height: 80px;
+      display: inline-block;
+      overflow: hidden;
+      vertical-align: middle;
+      svg {
+        fill: #444;
+      }
+      &.toggled {
+        svg {
+          fill: $orange;
+        }
+      }
+    }
+  }// .about-toggle-box
+  @media only screen and (max-width: $bp-phone){
+    [class^="icon-"]{
+    transform: scale(.9);
+    margin: 0;
+    }
+  }// media max-width: $bp-phone
   @media only screen and (max-width: $bp-tablet){
     .face-lockup {
       display: block;
       text-align: center;
-      div {
+      [class^="icon-"]{
       display: inline-block;
-      margin: 2rem;
+      margin: 1rem 0;
       }
       .face-image {
         display: block;
         margin: 2rem auto;
       }
     }
-  }// media m-w: $bp-tablet
-  .blurb {
-    margin: 0 auto;
-    max-width: 60rem;
-    padding: 1rem;
-    font-size: 1.75rem;
-    @media only screen and (min-width: $bp-tablet){
+  }// media max-width: $bp-tablet
+  @media only screen and (min-width: $bp-tablet){
+    .blurb {
       margin: 3rem auto;
+      margin-bottom: 0;
+      p {
+        margin-bottom: 0;
+      }
     }
-  }// .blurb
-
+  }// media min-width: $bp-tablet
 }// #about

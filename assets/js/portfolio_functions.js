@@ -109,5 +109,15 @@ function resumeStuff(){
 }
 resumeStuff();
 
+function aboutStuff(){
+    $('.about-toggle').click(function(){
+      $(this).toggleClass('toggled');
+      $('.bio-belt').toggleClass('toggled');
+      $('#about').toggleClass('toggled');
+      $('.toggle-tie').toggleClass('toggled');
+      $('.toggle-sunglasses').toggleClass('toggled');
+    });
+}
+aboutStuff();
 
 }); // $(document).ready
