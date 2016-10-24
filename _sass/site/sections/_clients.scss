@@ -4,30 +4,45 @@
   .section-header {
     .section-title {
       color:#444;
-      padding-bottom: 10rem;
+      padding-bottom: 12rem;
     }
     background: url(assets/img/client-bg.png);
-    margin-bottom: -8rem;
+    margin-bottom: -10rem;
   }// .section-header
   .clients-container {
     margin: 0 auto;
     max-width: 100rem;
     display: flex;
+    @media screen and (max-width: $bp-tablet){
+      display: block;
+    }
     align-items: center;
     justify-content: space-around;
+
     .client {
+      @media screen and (max-width: $bp-tablet){
+        display: block;
+        margin: 4rem auto;
+        min-height: 1rem;
+        
+      }
       max-width: 40rem;
       min-height: 50rem;
       text-align: center;
       .client-face {
-        margin: 2rem auto;
+        box-shadow: -2px -2px 0 rgba(0,0,0,.4), 2px 2px rgba(255,255,255,.15);
+        margin: 2rem auto 1rem;
         width: 170px;
         height: 170px;
         border-radius: 50%;
+        background-size: cover;
       }// .client-face
       .client-name {
         color: $orange;
         font-size: 2rem;
+        @media screen and (max-width: $bp-tablet){
+          font-size: 2.25rem;
+        }
       }
       .client-title, .client-company {
         display: inline-block;
@@ -35,10 +50,33 @@
         color: #ddd;
         text-transform: none;
         font-style: italic;
+        @media screen and (max-width: $bp-tablet){
+          font-size: 2rem;
+        }
       }// .client-title, .client-company
       .testimonial {
         color: #eee;
         padding: 2rem;
+        position: relative;
+        margin: 2rem auto 5rem;
+        @media screen and (max-width: $bp-tablet){
+          margin: 1rem auto;
+          padding: 1rem;
+          padding-top: 1rem;
+          font-size: 1.75rem;
+        }
+        &:before {
+          font-family: FontAwesome;
+          content: '\f10d';
+          font-size: 4rem;
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: rgba(255,255,255,.2);
+          @media screen and (max-width: $bp-tablet){
+            top: -1.5rem;
+          }
+        }
       }
     }// .client
   }// .clients-container

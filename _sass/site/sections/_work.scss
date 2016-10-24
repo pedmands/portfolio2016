@@ -40,7 +40,7 @@
       overflow: hidden;
       @include respond-to(phone){
         width:100%;
-        padding-top: 56%;
+        padding-top: 33%;
       }
       @include respond-to(tablet){
         width:50%;
@@ -59,12 +59,26 @@
         left:0;
         width:100%;
         height:100%;
-        background: rgba(#333,.6);
+        background: rgba(#333,.7);
+        &:after {
+          font-family: FontAwesome;
+          content: '\f178';
+          font-size: 2rem;
+          color: #ccc;
+        }
+        @media screen and (max-width: $bp-tablet){
+          top:0;
+          @include inset;
+        }
         h3 {
           padding-top: 2.5rem;
           color: #fff;
           font-size: 1.75rem;
           line-height: 1.2;
+          @media screen and (max-width: $bp-tablet){
+            font-size: 2.25rem;
+            padding-top: 3.5rem;
+          }
         }
         h4 {
           transition: all 1s ease-out;
@@ -75,9 +89,9 @@
           font-weight: 400;
           font-size: 1.75rem;
           line-height: .85;
-        }
-        .frill {
-        width:50%;
+          @media screen and (max-width: $bp-tablet){
+            font-size: 2rem;
+          }
         }
       }
       &:hover .thumb-overlay {
@@ -145,6 +159,9 @@
       padding-top:2rem;
       border-top: 1px solid #969696;
       margin-top:3rem;
+      @include respond-to(phone){
+        margin-left: 1rem;
+      }
     }
     i {
       position: absolute;
