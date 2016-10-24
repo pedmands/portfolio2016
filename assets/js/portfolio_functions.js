@@ -59,9 +59,11 @@ function workLoad(){
         newTitle = $this.find('.thumb-title').text(),
         newFolder = $this.data('folder'),
         spinner = '<div class="loader">Loading...</div>',
-        newHTML = '/work/' + newFolder + '.html';
+        newHTML = '/work/' + newFolder + '.html',
+        target = $('#work-wrap');
     $('.project-load').html(spinner).load(newHTML);
-$('.project-title').text(newTitle);
+    $('html,body').animate({ scrollTop: target.offset().top - 60}, 500);
+    $('.project-title').text(newTitle);
   });
 }
 workLoad();
@@ -109,11 +111,11 @@ function resumeStuff(){
 }
 resumeStuff();
 
+// About formal-casual slider
 function aboutStuff(){
     $('.about-toggle').click(function(){
       $(this).toggleClass('toggled');
       $('.bio-belt').toggleClass('toggled');
-      $('#about').toggleClass('toggled');
       $('.toggle-tie').toggleClass('toggled');
       $('.toggle-sunglasses').toggleClass('toggled');
     });

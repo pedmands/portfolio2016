@@ -5,9 +5,6 @@
   padding: 0;
   overflow-x: hidden;
   position: relative;
-  &.toggled {
-    background-color: #ddd;
-  }
   .bio-belt {
     @include clearfix;
     transition: all .4s ease-out;
@@ -33,7 +30,7 @@
     .face-image {
       height: 200px;
       width: 200px;
-      border: 1rem solid $orange;
+      border: .5rem solid $orange;
       border-radius: 50%;
       background: url(/assets/img/face.png);
       background-position: center;
@@ -87,7 +84,8 @@
   .about-toggle-box {
     display: block;
     text-align: center;
-    margin: 3rem auto;
+    margin: 0 auto;
+    margin-bottom: 3rem;
     .about-toggle {
       box-shadow: none;
       border: none;
@@ -99,7 +97,7 @@
       overflow: hidden;
       svg {
         transform: scale(.75);
-        fill: #969696;
+        fill: #464646;
         overflow: hidden;
         width:85px;
         height:55px;
@@ -109,20 +107,23 @@
       }
     }// .about-toggle
     [class^='toggle-']{
+      transition: all .4s ease-out;
+      transform: scale(.8);
       width: 80px;
       height: 80px;
       display: inline-block;
       overflow: hidden;
       vertical-align: middle;
       svg {
-        fill: #444;
+        fill: #464646;
       }
       &.toggled {
+        transform: scale(1);
         svg {
           fill: $orange;
         }
       }
-    }
+    }// .toggle-*
   }// .about-toggle-box
   @media only screen and (max-width: $bp-phone){
     [class^="icon-"]{

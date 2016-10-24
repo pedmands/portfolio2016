@@ -4,16 +4,13 @@
   padding-bottom: 5rem;
   overflow-x:hidden;
   padding:0;
-  img {
-    padding-bottom: 5rem;
-  }
   .work-belt {
     transition: all .4s ease-in;
     width:200%;
     position: relative;
     left: 0;
   }
-  .thumb-wrap,.work-wrap {
+  .thumb-wrap,#work-wrap {
     width:50%;
     float: left;
   }
@@ -21,7 +18,7 @@
   .thumb-container {
     max-width:1024px;
     margin:0 auto;
-    padding-bottom: 6rem;
+    padding-bottom: 10rem;
     @include clearfix;
     .thumb-unit {
       background: #444444;
@@ -104,10 +101,9 @@
     i {
       cursor: pointer;
       display: inline-block;
-      font-size: 2.8rem;
-      color: #21b4da;
-      margin-right: 2rem;
-      margin-bottom:1rem;
+      font-size: 3rem;
+      color: #464646;
+      margin: 0 2rem 1rem;
       vertical-align: middle;
       &:hover {
         color:#027a99;
