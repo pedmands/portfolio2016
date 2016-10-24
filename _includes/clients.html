@@ -3,26 +3,14 @@
       <h1 class="section-title">Clients</h1>
    </header>
    <div class="clients-container">
-      <div class="client">
-         <img src="" alt="">
-         <h3>Lance Edmands</h3>
-         <h4>CEO, Moon Sprockets LLC</h4>
-         <blockquote class="testimonial">Whenever I work with Preston, I always get results far beyond my expectaions. The man works media miracles.</blockquote>
-         <button class="see-project">See Project</button>
-      </div> <!-- client -->
-      <div class="client">
-         <img src="" alt="">
-         <h3>Lance Edmands</h3>
-         <h4>CEO, Moon Sprockets LLC</h4>
-         <blockquote class="testimonial">Whenever I work with Preston, I always get results far beyond my expectaions. The man works media miracles.</blockquote>
-         <button class="see-project">See Project</button>
-      </div> <!-- client -->
-      <div class="client">
-         <img src="" alt="">
-         <h3>Lance Edmands</h3>
-         <h4>CEO, Moon Sprockets LLC</h4>
-         <blockquote class="testimonial">Whenever I work with Preston, I always get results far beyond my expectaions. The man works media miracles.</blockquote>
-         <button class="btn-see-project">See Project</button>
-      </div> <!-- client -->
+     {% for client in site.data.settings.clients %}
+     <div class="client">
+       <div class="client-face" data-folder="{{client.folder}}" style="background-image: url(/assets/img/clients/{{client.folder}}/face.png)"> </div>
+           <h3 class="client-name">{{ client.name }}</h3>
+           <h4 class="client-title">{{ client.title }},</h4> <h4 class="client-company">{{ client.company }}</h4>
+           <blockquote class="testimonial">{{ client.quote }}</blockquote>
+
+     </div>
+     {% endfor %}
    </div><!-- clients-container -->
 </section><!-- / #clients -->

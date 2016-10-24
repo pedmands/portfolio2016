@@ -120,11 +120,24 @@ resumeStuff();
 
 // About formal-casual slider
 function aboutStuff(){
-    $('.about-toggle').click(function(){
-      $(this).toggleClass('toggled');
-      $('.bio-belt').toggleClass('toggled');
-      $('.toggle-tie').toggleClass('toggled');
-      $('.toggle-sunglasses').toggleClass('toggled');
+  var target = $('.about-toggle-box').children();
+    $(target).click(function(){
+      var $this = $(this);
+      if ($this.hasClass('about-toggle')){
+        $('.about-toggle').toggleClass('toggled');
+        $('.bio-belt').toggleClass('toggled');
+        $('.toggle-tie').toggleClass('toggled');
+        $('.toggle-sunglasses').toggleClass('toggled');
+      } else if ($this.hasClass('toggle-tie') || $this.hasClass('toggle-sunglasses')){
+        if ($this.hasClass('toggled')){}
+        else {
+          $('.about-toggle').toggleClass('toggled');
+          $('.bio-belt').toggleClass('toggled');
+          $('.toggle-tie').toggleClass('toggled');
+          $('.toggle-sunglasses').toggleClass('toggled');
+        }
+      }
+
     });
 }
 aboutStuff();

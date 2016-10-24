@@ -9,3 +9,30 @@ projects:
   - {name: Survivor Speak, category: Graphic Design, folder: 'proj-6'}
   - {name: Topical Roots, category: WordPress, folder: 'proj-7'}
   - {name: White Noise, category: WordPress, folder: 'proj-8'}
+
+# clients
+clients:
+  - {
+    name: Lance Edmands,
+    title: Director,
+    company: Vacationland,
+    project: 'proj-3',
+    folder: 'client-1',
+    quote: 'Preston is just the best!!!'
+    }
+  - {
+    name: Barack Obama,
+    title: POUTS,
+    company: USA,
+    project: 'proj-5',
+    folder: 'client-2',
+    quote: 'Wow! What a thrill to have spoken to the wisest man this side of the delta.'
+    }
+  - {
+    name: Jerk Face,
+    title: Lead Asshole,
+    company: United Pants, Inc,
+    project: 'proj-1',
+    folder: 'client-3',
+    quote: 'FUCK!'
+    }
