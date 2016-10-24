@@ -1,0 +1,69 @@
+.lander-wrap {
+   background: url('assets/img/header.png');
+   background-position: right bottom;
+}
+#home {
+   position: relative;
+   .cover-letter {
+      .letter-content { height: 100%; position: relative;}
+      h1,h2,h3,h4 {font-family: 'Noto Serif';text-transform: none;}
+      background-color: #fff;
+      margin: 16px calc(50% - 300px); //width 600px
+      height:75%;
+      padding: 32px;
+      position:absolute;
+      bottom: 25px;
+      box-shadow: -4px 4px 0 #000;
+      z-index: 100;
+      #dear-john {
+         font-weight: 700;
+         font-style: italic;
+         margin-bottom: 25px;
+      }// #dear-john
+      #sincerely {
+         text-align: right;
+         font-style: italic;
+      }
+      .signature {
+         text-align: right;
+         position: absolute;
+         bottom:15px;
+         right:0;
+         .sig-box {
+           padding-top:30px;
+         }
+         #date {
+           font-style: italic;
+         }
+      }// .signature
+      .nav-down {
+        padding: 0;
+        font-size: 50px;
+        background: none;
+        border: none;
+        box-shadow: none;
+        position: absolute;
+        bottom: -30px;
+        width: 100%;
+        text-align: center;
+      }
+      .dropcap {
+        float: left;
+        color: #999;
+        font-size: 75px;
+        line-height: 60px;
+        padding-top: 4px;
+        padding-right: 8px;
+        padding-left: 3px;
+        font-weight: 400;
+        font-family: 'Oswald';
+      }//dropcap
+   }// .cover-letter
+   .dark-bar {
+      width: 100%;
+      height: 80px;
+      background-color: #252525;
+      position: absolute;
+      bottom: 0;
+   }
+}// #home
