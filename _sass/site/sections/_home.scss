@@ -8,13 +8,19 @@
       .letter-content { height: 100%; position: relative;}
       h1,h2,h3,h4 {font-family: 'Noto Serif';text-transform: none;}
       background-color: #fff;
-      margin: 16px calc(50% - 300px); //width 600px
+      margin: 16px calc(50% - 225px); //width 550px
       height:75%;
-      padding: 32px;
+      padding: 2rem 1rem;
       position:absolute;
-      bottom: 25px;
-      box-shadow: -4px 4px 0 #000;
+      bottom: 3rem;
+      box-shadow: -3px 4px 5px rgba(0,0,0,.4);
       z-index: 100;
+      @include respond-to(phone){
+        width: 95%;
+        margin: 0;
+        bottom:0;
+        height: 80%;
+      }
       #dear-john {
          font-weight: 700;
          font-style: italic;
@@ -27,26 +33,15 @@
       .signature {
          text-align: right;
          position: absolute;
-         bottom:15px;
+         bottom:0;
          right:0;
          .sig-box {
-           padding-top:30px;
+           padding-top:8rem;
          }
          #date {
            font-style: italic;
          }
       }// .signature
-      .nav-down {
-        padding: 0;
-        font-size: 50px;
-        background: none;
-        border: none;
-        box-shadow: none;
-        position: absolute;
-        bottom: -30px;
-        width: 100%;
-        text-align: center;
-      }
       .dropcap {
         float: left;
         color: #999;
@@ -61,9 +56,12 @@
    }// .cover-letter
    .dark-bar {
       width: 100%;
-      height: 80px;
-      background-color: #252525;
+      height: 10rem;
+      background-color: #444;
       position: absolute;
       bottom: 0;
+      @include respond-to(phone){
+        display: none;
+      }
    }
 }// #home
