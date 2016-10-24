@@ -35,7 +35,64 @@ fullWidth();
     return false;
   });
 
-// Isotope
+// Give nav a bg when scrolled passed cover letter
+var mbg = $(".menu-bg");
+mbgs = "menu-bg-sticky";
+lw = $(".lander-wrap").height();
+
+$(window).scroll(function() {
+	if( $(this).scrollTop() > lw - 100 ) {
+		mbg.addClass(mbgs);
+	} else {
+		mbg.removeClass(mbgs);
+	}
+});
+
+// Nav Highlighting
+$(window).scroll(function(){
+
+  var windowPos = $(window).scrollTop() + 60;
+  $('nav li a').css({'text-decoration' : 'none'});
+  $('a[href$="#home"]').css({'text-decoration' : 'underline'});
+
+  if (windowPos > $('#resume').offset().top) {
+    $('nav li a').css({'text-decoration' : 'none'});
+    $('a[href$="#resume"]').css({'text-decoration' : 'underline'});
+  }
+
+  if (windowPos > $('#work').offset().top) {
+    $('nav li a').css({'text-decoration' : 'none'});
+    $('a[href$="#work"]').css({'text-decoration' : 'underline'});
+  }
+  if (windowPos > $('#about').offset().top) {
+    $('nav li a').css({'text-decoration' : 'none'});
+    $('a[href$="#about"]').css({'text-decoration' : 'underline'});
+  }
+  if (windowPos > $('#clients').offset().top) {
+    $('nav li a').css({'text-decoration' : 'none'});
+    $('a[href$="#clients"]').css({'text-decoration' : 'underline'});
+  }
+  if (windowPos > $('#contact').offset().top) {
+    $('nav li a').css({'text-decoration' : 'none'});
+    $('a[href$="#contact"]').css({'text-decoration' : 'underline'});
+  }
+
+});
+//Smooth Scrolling
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top - 40
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
 
 
 function workBelt() {
