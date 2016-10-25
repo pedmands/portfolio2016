@@ -12,3 +12,9 @@
   background-position: bottom;
   text-shadow: 4px 0px $background, -4px 0px $background;
 }
+@mixin thickerUnderline($color: #ffcc00,$background: #444444){
+  background: linear-gradient($color, $color) no-repeat;
+  background-size: 100% .3rem;
+  background-position: bottom;
+  text-shadow: 2px 3px $background, -2px 3px $background;
+}

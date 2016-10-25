@@ -30,7 +30,7 @@ section {
     @include respond-to(phone){margin: 2rem 3rem;}
     @include respond-to(desktop){margin: 2rem 12rem;}
   }
-}
+}// #social-1
 
 @import "sections/work";
 

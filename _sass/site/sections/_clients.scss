@@ -3,11 +3,9 @@
   padding:0;
   .section-header {
     .section-title {
-      color:#444;
-      padding-bottom: 12rem;
+      color:#e5eaee;
+
     }
-    background: url(assets/img/client-bg.png);
-    margin-bottom: -10rem;
   }// .section-header
   .clients-container {
     margin: 0 auto;
@@ -22,9 +20,8 @@
     .client {
       @media screen and (max-width: $bp-tablet){
         display: block;
-        margin: 4rem auto;
+        margin: 0 auto;
         min-height: 1rem;
-        
       }
       max-width: 40rem;
       min-height: 50rem;
@@ -60,9 +57,10 @@
         position: relative;
         margin: 2rem auto 5rem;
         @media screen and (max-width: $bp-tablet){
-          margin: 1rem auto;
+          margin: 0 auto;
           padding: 1rem;
           padding-top: 1rem;
+          padding-bottom: 5rem;
           font-size: 1.75rem;
         }
         &:before {
