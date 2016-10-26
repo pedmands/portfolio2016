@@ -1,29 +1,41 @@
 .github {
+  transition: all .3s ease-out;
+  position: relative;
   display: block;
+  width: 20rem;
+  text-align: center;
+  vertical-align: middle;
+  margin: 3rem auto;
+  padding:2rem 2.75rem;
+  padding-right:0;
   background: $blue;
-  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.75rem;
   font-weight: normal;
-  font-size: 1.5rem;
-  margin: 3rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: none;
   box-shadow: none;
   border: none;
-  text-transform: uppercase;
-  font-family: 'Source Sans Pro', sans-serif;
-  padding: 1.5rem;
-  text-decoration: none;
   border-radius: 5px;
+
   &:before {
+    display: block;
     font-family: FontAwesome;
     content: '\f09b';
     margin-right: 2rem;
     font-size: 2.5rem;
-    vertical-align: middle;
+    color: $gray1;
+    position: absolute;
+    left: 2.25rem;
+    top:1.5rem;
   }
   &:hover {
     box-shadow: none;
-    background: lighten($blue, 10%);
+    background: darken($blue, 10%);
+
   }
   &:visited {
-    color: #ddd;
+    color: $gray1;
   }
 }

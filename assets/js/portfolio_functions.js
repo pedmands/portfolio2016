@@ -50,31 +50,48 @@ $(window).scroll(function() {
 
 // Nav Highlighting
 $(window).scroll(function(){
+  var windowPos = $(window).scrollTop() + 60,
+      bgDecorated = {'background':'#DADADA'},
+      textDecorated = {'color':'#eb868c'},
+      bgPlain = {'background':'none'},
+      textPlain = {'color':'#DADADA'};
 
-  var windowPos = $(window).scrollTop() + 60;
-  $('nav li a').css({'text-decoration' : 'none'});
-  $('a[href$="#home"]').css({'text-decoration' : 'underline'});
+
+  $('nav li').css(bgPlain);
+  $('nav li a').css(textPlain);
+  $('.menu-home').css(bgDecorated);
+  $('a[href$="#home"]').css(textDecorated);
 
   if (windowPos > $('#resume').offset().top) {
-    $('nav li a').css({'text-decoration' : 'none'});
-    $('a[href$="#resume"]').css({'text-decoration' : 'underline'});
+    $('nav li').css(bgPlain);
+    $('nav li a').css(textPlain);
+    $('.menu-resume').css(bgDecorated);
+    $('a[href$="#resume"]').css(textDecorated);
   }
 
   if (windowPos > $('#work').offset().top) {
-    $('nav li a').css({'text-decoration' : 'none'});
-    $('a[href$="#work"]').css({'text-decoration' : 'underline'});
+    $('nav li').css(bgPlain);
+    $('nav li a').css(textPlain);
+    $('.menu-work').css(bgDecorated);
+    $('a[href$="#work"]').css(textDecorated);
   }
   if (windowPos > $('#about').offset().top) {
-    $('nav li a').css({'text-decoration' : 'none'});
-    $('a[href$="#about"]').css({'text-decoration' : 'underline'});
+    $('nav li').css(bgPlain);
+    $('nav li a').css(textPlain);
+    $('.menu-about').css(bgDecorated);
+    $('a[href$="#about"]').css(textDecorated);
   }
   if (windowPos > $('#clients').offset().top) {
-    $('nav li a').css({'text-decoration' : 'none'});
-    $('a[href$="#clients"]').css({'text-decoration' : 'underline'});
+    $('nav li').css(bgPlain);
+    $('nav li a').css(textPlain);
+    $('.menu-clients').css(bgDecorated);
+    $('a[href$="#clients"]').css(textDecorated);
   }
   if (windowPos > $('#contact').offset().top) {
-    $('nav li a').css({'text-decoration' : 'none'});
-    $('a[href$="#contact"]').css({'text-decoration' : 'underline'});
+    $('nav li').css(bgPlain);
+    $('nav li a').css(textPlain);
+    $('.menu-contact').css(bgDecorated);
+    $('a[href$="#contact"]').css(textDecorated);
   }
 
 });

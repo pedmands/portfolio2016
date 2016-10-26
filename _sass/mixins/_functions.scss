@@ -13,3 +13,11 @@
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+ */
 }
+
+@mixin buttonWipe(){
+  background: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  text-shadow: none;
+}

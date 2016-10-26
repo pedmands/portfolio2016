@@ -30,13 +30,14 @@
 *   5.3 Images
 *
 */
+/*//////// 1.0 Normalize ////////*/
+@import "normalize/normalize";
 /*//////// 0.1 Variables ////////*/
 @import "variables/vars";
 /*//////// 0.2 Mixins ////////*/
 @import "mixins/mixins";
 
-/*//////// 1.0 Normalize ////////*/
-@import "normalize/normalize";
+
 
 /*//////// 2.0 Navigation ////////*/
 @import "navigation/navigation";

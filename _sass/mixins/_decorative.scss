@@ -12,3 +12,13 @@
 -moz-box-shadow: inset 0px 5px 10px -3px rgba(0,0,0,0.75);
 box-shadow: inset 0px 5px 10px -3px rgba(0,0,0,0.75);
 }
+
+// Backgrounds
+@mixin bgFadeOutLeft($color){
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#dadada+0,dadada+100&0+0,0.8+35,1+100 */
+background: -moz-linear-gradient(left,  rgba($color,0) 0%, rgba($color,0.8) 35%, rgba($color,1) 100%) !important; /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba($color,0) 0%,rgba($color,0.8) 35%,rgba($color,1) 100%) !important; /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba($color,0) 0%,rgba($color,0.8) 35%,rgba($color,1) 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00dadada', endColorstr='#dadada',GradientType=1 ) !important; /* IE6-9 */
+
+}

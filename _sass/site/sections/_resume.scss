@@ -2,13 +2,13 @@
 #resume {
   transition: all 1s ease-out;
   position: relative;
-  background-color: #444;
+  background-color: $darkGray;
   color: white;
   height:100%;
-  min-height:65rem;
+  min-height:75rem;
   .section-header {
     margin-bottom: 2rem;
-    
+
   }
 }
 .resume-belt {
@@ -30,33 +30,38 @@
       margin: 0 auto;
       display:table;
       table-layout: fixed;
-
       .experience-unit {
         display: table-cell;
-        padding: 0 1rem;
+        padding: 0 3rem;
         width:33%;
         height:100%;
-        text-align: left;
+        text-align: center;
         @media screen and (min-width: $bp-phone) and (max-width:700px){
           &:last-child{display: none;}
+        }
+        @include respond-to(tablet){
+          padding: 0 1rem;
+          margin: 0 auto;
         }
         @include respond-to(phone){
           display: block;
           width:95%;
+          padding: 0;
+          margin: 0 auto;
         }
-        h3 {
-          @include thickUnderline($yellow,#444444);
+        h4 {
           position: relative;
-          font-family: Ampersand, 'Source Sans Pro';
+          font-family: Ampersand, 'Raleway', sans-serif;
           font-size: 2.5rem;
           text-transform: none;
           color:#efefef;
+          font-weight: 600;
           .amp {
             font-size: 2.5rem;
             vertical-align: bottom;
             margin: 0 .25rem;
           }
-        }// h3
+        }// h4
         .company {
           font-size: 1.5rem;
           font-style: italic;
@@ -64,33 +69,38 @@
           font-weight: 600;
           // text-transform: uppercase;
         }// .company
-        h4 {
+        h5 {
           display: block;
           font-style: italic;
           text-transform: none;
-          margin-bottom: 1rem;
           color: #999999;
-          .location{
-            &:after {
-              content: '/';
+          .dates{
+            &:before {
+              content: ' /';
               display: inline-block;
-              margin-left:.75rem;
+              margin:0 .5rem;
+              color:$midGray;
             }
           }// .location
-        }// h4
+        }// h5
         ul{
-          font-family: "Noto Serif";
+          font-family: "Merriweather";
           text-align: left;
           list-style-type:  none;
           line-height: 1.5;
-
+          margin-top: 2rem;
+          @include respond-to(phone){
+            margin-top:1rem;
+            margin-bottom:3rem;
+          }
           li {
             margin-bottom: 1rem;
-            font-size: .9em;
+            font-size: 1em;
+            line-height: 1.5;
             &:before {
               font-family: FontAwesome;
               content: '\f0c8';
-              color:#ffcc00;
+              color:$midGray;
               margin-right: 1rem;
               vertical-align: middle;
               font-size: 1rem;
@@ -104,25 +114,31 @@
       margin: 0 auto;
       width: 95%;
       ul{
-
         text-align: left;
-        font-size: 1.8rem;
-        font-family: "Noto Serif";
+        font-size: 1em;
+        font-family: "Merriweather";
         li {
           display: block;
           margin: 1.2rem 0;
-          font-size: .9em;
+          font-size: 1em;
           &:before {
             font-family: FontAwesome;
-            font-size: 1em;
-            color: #ffcc00;
+            font-size: 1.25em;
+            color: $gray2;
             margin-right: 1.5rem;
-            content: '\f046';
+            content: '\f00c';
           }// li:before
           a {
-            color: #ffcc00;
-            @include thickUnderline($yellow, #444);
+            color: $blue;
+            @include thickUnderline($blue, $darkGray);
             text-decoration: none;
+            &:hover {
+              background: none;
+              color: lighten($blue,10%) !important;
+            }
+            &:visited {
+              color: $gray2;
+            }
           }// li a
           [href^="http"]:not([href*="localhost"])::after {
             display: inline-block;
@@ -144,10 +160,10 @@
       .stars {
         display: block;
         margin-top:.5rem;
-        color: $yellow;
+        color: $blue;
         font-size: 1.75rem;
         .fa-star.dark {
-          color: #000;
+          color: $gray4;
           position: relative;
         }
         .fa.fa-star-half {
@@ -158,7 +174,7 @@
           &:before {
             font-family: FontAwesome;
             content: '\f089';
-            color: #ffcc00;
+            color: $blue;
             font-size: 100%;
             position: absolute;
             left: 0;
@@ -168,8 +184,8 @@
       }//.stars
       ul{
         text-align: center;
-        font-size: 1.25em;
-        font-family: "Noto Serif";
+        font-size: 1.2em;
+        font-family: "Merriweather";
         margin: 0 auto;
         color: #fff;
         li {
@@ -177,16 +193,13 @@
           width: 14rem;
           margin: 1rem;
           padding: .5rem 1.25rem;
-          background-color: #333;
+          background-color: $gray3;
           max-width: 100%;
           overflow-x: auto;
           vertical-align: middle;
           -webkit-border-radius: 5px;
           -moz-border-radius: 5px;
           border-radius: 5px;
-          -webkit-box-shadow: inset 0 1px 10px rgba(0,0,0,0.5),0 1px 0 rgba(255,255,255,0.5),0 -1px 0 rgba(0,0,0,0.5);
-          -moz-box-shadow: inset 0 1px 10px rgba(0,0,0,0.3),0 1px 0 rgba(255,255,255,0.1),0 -1px 0 rgba(0,0,0,0.5);
-          box-shadow: inset 0 1px 10px rgba(0,0,0,0.3),0 1px 0 rgba(255,255,255,0.1),0 -1px 0 rgba(0,0,0,0.5);
           a {
             color: $yellow;
             &:hover {
@@ -204,15 +217,16 @@
   position: relative;
   justify-content: center;
   .resume-tab {
+    @include buttonWipe;
+    transition: color .2s ease-in-out, transform .2s ease-out;
     display: inline-block;
-    color: #fff;
-    background: none;
-    box-shadow: none;
-    border: none;
-    padding: .5rem 2rem;
-    margin: 2rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
     font-size: 1.5rem;
-    text-shadow: none;
+    color: #fff;
+    padding: 1.5rem;
+    margin: 1.5rem;
+    margin-top: 0;
     text-transform: uppercase;
     cursor: pointer;
     @media screen and (max-width: $bp-tablet){
@@ -221,24 +235,19 @@
       display: none;
     }
     &.active-tab {
-      background-color: #2b2b2b;
-      color: #ffcc00;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-      -webkit-box-shadow: inset 0 1px 10px rgba(0,0,0,0.3),0 1px 0 rgba(255,255,255,0.1),0 -1px 0 rgba(0,0,0,0.5);
-      -moz-box-shadow: inset 0 1px 10px rgba(0,0,0,0.3),0 1px 0 rgba(255,255,255,0.1),0 -1px 0 rgba(0,0,0,0.5);
-      box-shadow: inset 0 1px 10px rgba(0,0,0,0.3),0 1px 0 rgba(255,255,255,0.1),0 -1px 0 rgba(0,0,0,0.5);
+      @include thickerUnderline($blue, $darkGray);
       @media screen and (max-width: $bp-tablet){
         display: block;
         width: 80%;
-        max-width: 22.5rem;
+        max-width: 20rem;
         margin: 0 auto;
+        font-size: 2.25rem;
       }
     }
     &:hover {
       box-shadow: none;
-      color: #ffcc00;
+      color: $blue;
+      transform: translateY(-3px);
     }
   }// .resume-tab
 }// .resume-tabs
@@ -251,24 +260,52 @@
   top: 50%;
   left: 0;
   z-index:100;
-    @media screen and (max-width: $bp-tablet){
-      top: 9.5rem;
-    }
+  @media screen and (max-width: $bp-tablet){
+      top: 14rem;
+      font-size: 5rem;
+  }
   transform: translateY(-50%);
   .resume-control-prev {
     position: absolute;
     top:50%;
-    left: 0;
+    left: -2rem;
+    @include respond-to(phone){
+      left:-4rem;
+    }
   }
   .resume-control-next {
     position: absolute;
     top: 50%;
-    right: 0;
+    right: -2rem;
+    @include respond-to(phone){
+      right:-4rem;
+    }
   }
   .resume-control-prev,
   .resume-control-next {
+    text-shadow: none;
+    background: none;
+    box-shadow: none;
+    border: none;
     cursor: pointer;
-    &:before{font-family: FontAwesome; color: #ccc; font-size: 4rem;padding:3rem;}
+    &:before{
+      transition: color .2s ease-in-out, transform .2s ease-out;
+      font-family: FontAwesome;
+      color: $lightGray;
+      font-size: 6rem;
+      padding:3rem;
+      @media screen and (max-width: $bp-tablet){
+
+        font-size: 5rem;
+      }
+    }
+  } //   .resume-control-prev, .resume-control-next
+  .resume-control-prev:hover,
+  .resume-control-next:hover {
+    &:before {
+      color: $blue;
+
+    }
   }
   .resume-control-prev:before {content: '\f104';}
   .resume-control-next:before {content: '\f105';}

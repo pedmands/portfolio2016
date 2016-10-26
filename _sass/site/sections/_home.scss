@@ -3,16 +3,16 @@
    background-position: right bottom;
 }
 #home {
-   position: relative;
+  padding-top:8rem;
+  width: 100%;
    .cover-letter {
       .letter-content { height: 100%; position: relative;}
-      h1,h2,h3,h4 {font-family: 'Noto Serif';text-transform: none;}
-      background-color: #fff;
-      margin: 16px calc(50% - 225px); //width 550px
-      height:75%;
-      padding: 2rem 1rem;
-      position:absolute;
-      bottom: 3rem;
+      h1,h2,h3,h4 {font-family: 'Merriweather', serif;text-transform: none;}
+      background: $gray1;
+      margin: 0 auto;
+      max-width: 70rem;
+      height:66%;
+      padding: 4rem;
       box-shadow: -3px 4px 5px rgba(0,0,0,.4);
       z-index: 100;
       @include respond-to(phone){
@@ -20,6 +20,7 @@
         margin: 0;
         bottom:0;
         height: 80%;
+        padding: 3rem 2.5%;
       }
       #dear-john {
          font-weight: 700;
@@ -54,14 +55,4 @@
         font-family: 'Oswald';
       }//dropcap
    }// .cover-letter
-   .dark-bar {
-      width: 100%;
-      height: 10rem;
-      background-color: #444;
-      position: absolute;
-      bottom: 0;
-      @include respond-to(phone){
-        display: none;
-      }
-   }
 }// #home
