@@ -14,11 +14,35 @@ $(document).html('<div class="loader">Loading...</div>').ready(function() {
   }
 fullWidth();
 
-  // adjust height of .fullheight & .fullheight elements on window resize.
-  $(window).resize(function() {
-  	fullWidth();
-    fullHeight();
-  });
+  // Set up mobile detection
+  var isMobile = {
+      Android: function() {
+          return navigator.userAgent.match(/Android/i);
+      },
+      BlackBerry: function() {
+          return navigator.userAgent.match(/BlackBerry/i);
+      },
+      iOS: function() {
+          return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+      },
+      Opera: function() {
+          return navigator.userAgent.match(/Opera Mini/i);
+      },
+      Windows: function() {
+          return navigator.userAgent.match(/IEMobile/i);
+      },
+      any: function() {
+          return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+      }
+  };
+
+  if (isMobile.any() === false ){
+    // adjust height of .fullheight & .fullheight elements on window resize.
+    $(window).resize(function() {
+    	fullWidth();
+      fullHeight();
+    });
+  }
 
   // Insert current date into signature portion of Cover letter
   var currentdate = new Date();
@@ -32,6 +56,7 @@ fullWidth();
       $('#site-wrapper').toggleClass('show-nav');
       $('#menu').toggleClass('open');
       $('#content').toggleClass('faded');
+      $('.logo').toggleClass('fly-out');
     return false;
   });
 
