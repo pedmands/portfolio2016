@@ -118,13 +118,18 @@ function workBelt() {
     $('.work-container').fadeIn();
   });
   $('.work-return').click(function(){
+    var target = $('#work');
+    $('html,body').animate({ scrollTop: target.offset().top - 60}, 500);
     $('.thumb-wrap').fadeIn();
     $('.work-belt').css('left','0');
     $('.work-container').fadeOut();
   });
   $('#bottom-button').click(function(){
-    var target = $('.thumb-wrap');
+    var target = $('#work');
     $('html,body').animate({ scrollTop: target.offset().top - 60}, 500);
+    $('.thumb-wrap').fadeIn();
+    $('.work-belt').css('left','0');
+    $('.work-container').fadeOut();
   });
 }
 workBelt();
@@ -140,7 +145,7 @@ function workLoad(){
         newFolder = $this.data('folder'),
         spinner = '<div class="loader">Loading...</div>',
         newHTML = '/work/' + newFolder + '.html',
-        target = $('#work-wrap');
+        target = $('#work');
     $('.project-load').html(spinner).load(newHTML);
     $('html,body').animate({ scrollTop: target.offset().top - 60}, 500);
     $('.project-title').text(newTitle);

@@ -27,6 +27,7 @@
       margin-bottom: 0;
     }
     .thumb-unit {
+      @include buttonWipe;
       background: #444444;
       background-position: center center;
       background-repeat: no-repeat;
@@ -45,6 +46,7 @@
       @include respond-to(phone){
         width:100%;
         padding-top: 33%;
+        margin-bottom: 2rem;
       }
       @include respond-to(tablet){
         width:49.25%;
@@ -71,19 +73,28 @@
           content: '\f178';
           font-size: 3rem;
           color: $blue;
+          @include respond-to(phone){
+            display: none;
+          }
+        }// &:after
+        @include respond-to(phone){
+          // @include inset;
+          display: block;
+          top:65%;
+          height:auto;
+
         }
-        @media screen and (max-width: $bp-phone){
-          top:0;
-          @include inset;
-        }
-        h3 {
+        .thumb-title {
           padding-top: 2.5rem;
           color: #fff;
           font-size: 2.5rem;
           line-height: 1.5;
           font-weight: 600;
           letter-spacing: -.05rem;
-          @media screen and (max-width: $bp-tablet){
+          @include respond-to(phone){
+            padding-top: 0;
+          }
+          @include respond-to(tablet){
             font-size: 2.25rem;
             padding-top: 3.5rem;
           }
@@ -96,14 +107,20 @@
           font-style: italic;
           font-weight: 400;
           font-size: 1.75rem;
-          line-height: .85;
+          line-height:1.5;
           @media screen and (max-width: $bp-tablet){
             font-size: 2rem;
           }
-        }
+          @include respond-to(phone){
+            display: none;
+          }
+        }// h4
       }
       &:hover .thumb-overlay {
         top: 0;
+        @include respond-to(phone){
+          top:65%;
+        }
       }
     }// .thumb-unit
   }// .thumb-container
@@ -167,11 +184,15 @@
       }
     }// .work-return
     #bottom-button {
-      width: 100%;
+      @include buttonWipe;
       text-align: center;
       padding-top:2rem;
       border-top: 1px solid $gray2;
       margin-top:3rem;
+      font-family: "Raleway", sans-serif;
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: 600;
       @include respond-to(phone){
         margin-left: 1rem;
       }

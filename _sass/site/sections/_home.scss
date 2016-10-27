@@ -1,6 +1,9 @@
 .lander-wrap {
    background: url('assets/img/header.png');
    background-position: right bottom;
+   background-size: cover;
+   background-attachment: fixed;
+
 }
 #home {
   padding-top:8rem;

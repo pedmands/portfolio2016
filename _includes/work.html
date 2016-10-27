@@ -7,13 +7,12 @@
         <div class="thumb-wrap">
           <div class="thumb-container">
            {% for project in site.data.settings.projects %}
-             <div class="thumb-unit" data-folder="{{project.folder}}" style="background-image: url(/assets/img/work/{{project.folder}}/thumb.png)">
+             <button class="thumb-unit" data-folder="{{project.folder}}" style="background-image: url(/assets/img/work/{{project.folder}}/thumb.png)">
                <span class="thumb-overlay">
                  <h3 class="thumb-title">{{ project.name }}</h3>
                  <h4 class="thumb-cat">{{ project.category }}</h4>
-
                </span>
-             </div>
+             </button>
            {% endfor %}
           </div><!-- .thumb-container -->
         </div>
@@ -26,7 +25,7 @@
             </div>
             <div class="project-load">
             </div>
-              <span id="bottom-button" class="fa fa-chevron-circle-left work-return"></span>
+              <button id="bottom-button">Back</button>
           </div> <!--  work-container -->
         </div>
        </div><!-- .work-belt -->
