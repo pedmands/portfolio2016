@@ -36,7 +36,7 @@ fullWidth();
       }
   };
 
-  if (isMobile.any() === false ){
+  if (isMobile.any() != true ){
     // adjust height of .fullheight & .fullheight elements on window resize.
     $(window).resize(function() {
     	fullWidth();
@@ -60,18 +60,38 @@ fullWidth();
     return false;
   });
 
-// Give nav a bg when scrolled passed cover letter
-var mbg = $(".menu-bg");
-mbgs = "menu-bg-sticky";
-lw = $(".lander-wrap").height();
+  ////// ON SCROLL //////
+  $(window).scroll(function() {
+  	navBg();
+    coverLetter();
+  });
 
-$(window).scroll(function() {
-	if( $(this).scrollTop() > lw - 100 ) {
+// Give nav a bg when scrolled passed cover letter
+function navBg(){
+  var mbg = $(".menu-bg");
+  mbgs = "menu-bg-sticky";
+  lw = $(".lander-wrap").height();
+  if( $(this).scrollTop() > lw - 100 ) {
 		mbg.addClass(mbgs);
 	} else {
 		mbg.removeClass(mbgs);
 	}
-});
+}
+// Parallax cover-letter
+function coverLetter(){
+  var letter = $('.cover-letter');
+  var s = $(this).scrollTop(),
+      d = $(document).height(),
+      c = $(this).height();
+      scrollPercent = (s / (d - c));
+
+       var position = -((scrollPercent * ($(document).height() - letter.height()))*1);
+
+       letter.css({
+           'top': position
+         });
+}
+
 
 // Nav Highlighting
 $(window).scroll(function(){

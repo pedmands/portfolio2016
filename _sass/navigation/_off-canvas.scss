@@ -24,11 +24,13 @@
 #menu {
   background: url('assets/img/header.png');
   background-position: right bottom;
+  background-color: $pink;
   transition: all .4s ease-in;
 	width: 300px;
 	position: fixed;
 	left: -300px;
 	top: 0;
+  height:100%;
   overflow: visible;
   z-index:100;
 }

@@ -1,14 +1,19 @@
 .lander-wrap {
-   background: url('assets/img/header.png');
-   background-position: right bottom;
-   background-size: cover;
-   background-attachment: fixed;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.05)25%, rgba(0,0,0,0)), url('assets/img/header.png');
+  background-position: right bottom;
+  background-size: cover;
+  background-attachment: fixed;
+
 
 }
 #home {
-  padding-top:8rem;
-  width: 100%;
+  @include clearfix;
+  position: relative;
    .cover-letter {
+     position:fixed;
+     left: 50%;
+     transform: translateX(-50%);
+     top:250px;
       .letter-content { height: 100%; position: relative;}
       h1,h2,h3,h4 {font-family: 'Merriweather', serif;text-transform: none;}
       background: $gray1;
