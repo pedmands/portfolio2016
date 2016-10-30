@@ -1,5 +1,5 @@
 .menu-bg {
-  transition: all .4s ease-in-out;
+  transition: all .3s ease-in-out;
   display: block;
   width:100%;
   height:  70px;
@@ -12,6 +12,12 @@
 }
 .menu-bg-sticky {
   opacity:1
+}
+.menu-bg.hide {
+  top: -70px;
+}
+.menu-bg.toggled.hide {
+  top:0;
 }
 #menu-toggle {
   padding:0;
@@ -29,7 +35,7 @@
   }
 }
 .logo {
-  transition: all .45s ease-in-out;
+  transition: all .3s ease-in-out;
   position: fixed;
   top:10px;
   right:0;
@@ -50,6 +56,9 @@
     -webkit-transform: translate3d(300px, 0, 0);
   }
 }// .logo
+.logo.hide {
+  top: -70px;
+}
 #menu {
   h1 {
     text-align: center;

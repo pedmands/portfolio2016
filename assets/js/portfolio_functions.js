@@ -1,47 +1,31 @@
 $(document).html('<div class="loader">Loading...</div>').ready(function() {
 
-  // set the height of any div with class 'fullheight' to viewport height.
-  function fullHeight(){
-    var wHeight = $(window).height();
-    $('.fullheight').css('height', wHeight);
-  }
-  fullHeight();
-
-  //set with width of elements with class 'fullwidth' to viewport width.
   function fullWidth(){
     var wWidth = $(window).width();
     $('.fullwidth').css('width', wWidth);
   }
-fullWidth();
-
-  // Set up mobile detection
-  var isMobile = {
-      Android: function() {
-          return navigator.userAgent.match(/Android/i);
-      },
-      BlackBerry: function() {
-          return navigator.userAgent.match(/BlackBerry/i);
-      },
-      iOS: function() {
-          return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-      },
-      Opera: function() {
-          return navigator.userAgent.match(/Opera Mini/i);
-      },
-      Windows: function() {
-          return navigator.userAgent.match(/IEMobile/i);
-      },
-      any: function() {
-          return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-      }
-  };
-  if (isMobile.any() != true ){
-    // adjust height of .fullheight & .fullheight elements on window resize.
-    $(window).resize(function() {
-    	fullWidth();
-      fullHeight();
-    });
+  function fullHeight(){
+    var wHeight = $(window).height();
+    $('.fullheight').css('height', wHeight);
   }
+  if ($(window).width() < 768 ){
+    $('.fullheight').css({'height':'650px'});
+    fullWidth();
+  } else {
+    fullHeight();
+    fullWidth();
+  }
+
+  $(window).resize(function(){
+    if ($(window).width() < 768 ){
+      $('.fullheight').css({'height':'650px'});
+      fullWidth();
+    } else {
+      fullHeight();
+      fullWidth();
+    }
+  });
+
 
   // Animate signature on scroll
   $(window).scroll(function(){
@@ -63,16 +47,41 @@ fullWidth();
       $('#menu').toggleClass('open');
       $('#content').toggleClass('faded');
       $('.logo').toggleClass('fly-out');
+      $('#menu-toggle').toggleClass('toggled');
+      $('.menu-bg').toggleClass('toggled');
     return false;
   });
 
+  // Hide/show toggle button on scroll
+  var position, direction, previous;
+
+  $(window).scroll(function(){
+    if( $(this).scrollTop() >= position ){
+      direction = 'down';
+      if(direction !== previous){
+        $('#menu-toggle').addClass('hide');
+        $('.menu-bg').addClass('hide');
+        $('.logo').addClass('hide');
+        previous = direction;
+      }
+    } else {
+      direction = 'up';
+      if(direction !== previous){
+        $('#menu-toggle').removeClass('hide');
+        $('.menu-bg').removeClass('hide');
+        $('.logo').removeClass('hide');
+        previous = direction;
+      }
+    }
+    position = $(this).scrollTop();
+  });
 
 // Give nav a bg when scrolled passed cover letter
 function navBg(){
   var mbg = $(".menu-bg");
   mbgs = "menu-bg-sticky";
   lw = $(".lander-wrap").height();
-  if( $(this).scrollTop() > lw - 100 ) {
+  if( $(this).scrollTop() > lw - 80 ) {
 		mbg.addClass(mbgs);
 	} else {
 		mbg.removeClass(mbgs);
@@ -89,8 +98,6 @@ $(window).scroll(function(){
       textDecorated = {'color':'#eb868c'},
       bgPlain = {'background':'none'},
       textPlain = {'color':'#DADADA'};
-
-
   $('nav li').css(bgPlain);
   $('nav li a').css(textPlain);
   $('.menu-home').css(bgDecorated);
@@ -180,14 +187,22 @@ function workLoad(){
         newFolder = $this.data('folder'),
         spinner = '<div class="loader">Loading...</div>',
         newHTML = '/work/' + newFolder + '.html',
-        target = $('#work-wrap');
+        target = $('#work-wrap'),
+        windowPos = $(window).scrollTop();
     $('.project-load').html(spinner).load(newHTML);
-    $('html,body').animate({ scrollTop: target.offset().top - 60}, 550);
     $('.project-title').text(newTitle);
     $('.project-cat').text(newCat);
+    if (windowPos > $('#work-title').offset().top){
+      $('html,body').animate({ scrollTop: target.offset().top - 60}, 500);
+    } else {
+      $('html,body').animate({ scrollTop: target.offset().top }, 500);
+    }
   });
 }
 workLoad();
+
+
+
 
 function resumeStuff(){
 

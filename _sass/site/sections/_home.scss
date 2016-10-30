@@ -3,12 +3,14 @@
   background-position: right bottom;
   background-size: cover;
   background-attachment: fixed;
+  height:100%;
 }
 #home {
   @include clearfix;
   margin: 0 auto;
   max-width: 51rem;
   position: relative;
+  height:100%;
   .cover-letter {
     position: absolute;
     top: 50%;
