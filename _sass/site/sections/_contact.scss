@@ -17,13 +17,14 @@
     }// i
   }// #social-2
   .big-mail {
-    @include thickerUnderline($orange,$purple);
-    font-size: 5rem;
-    color: $orange;
+    @include thickerUnderline($blue,$purple);
+    transition: all .3s ease-in;
+    font-size: 3rem;
+    color: $gray1;
     font-family: "Source Sans Pro", sans-serif;
     text-decoration: none;
     &:hover {
-      color: #ccc;
+      color: $blue;
     }
   }// .big-mail
   form {
@@ -32,6 +33,7 @@
     @media screen and (max-width: $bp-tablet){
       width:95%;
       padding:1rem;
+      margin-top:2rem;
     }
     .row {
       width:100%;
@@ -76,20 +78,22 @@
     }
     input[type="submit"]{
       transition: all .2s ease-in-out;
-      background: none;
+      background:$blue;
       box-shadow: none;
       text-shadow: none;
-      border: 4px solid $orange;
-      border-radius: 0;
+      border: none;
+      border-radius: 5px;
       margin: 3rem 0;
       padding: 1.25rem 2rem;
       float: right;
       color: #fff;
       text-transform: uppercase;
-      font-family: "Source Sans Pro", sans-serif;
+      font-family: "Raleway", sans-serif;
+      letter-spacing: -.05rem;
       font-size: 2rem;
       &:hover {
-        background:$orange;
+        box-shadow: none;
+        background: darken($blue, 10%);
       }
       @media screen and (max-width: $bp-tablet){
         display: block;

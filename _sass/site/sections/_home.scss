@@ -6,27 +6,33 @@
 }
 #home {
   @include clearfix;
+  margin: 0 auto;
+  max-width: 51rem;
   position: relative;
-   .cover-letter {
-     position:fixed;
-     left: 50%;
-     transform: translateX(-50%);
-     top:250px;
-      .letter-content { height: 100%; position: relative;}
-      h1,h2,h3,h4 {font-family: 'Merriweather', serif;text-transform: none;}
-      background: $gray1;
-      margin: 0 auto;
-      max-width: 70rem;
-      height:66%;
-      padding: 4rem;
-      box-shadow: -3px 4px 5px rgba(0,0,0,.4);
-      z-index: 100;
+
+  .cover-letter {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: $gray1;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 4rem;
+    box-shadow: -3px 4px 5px rgba(0,0,0,.4);
+    z-index: 100;
+    h1,h2,h3,h4 {
+        font-family: 'Merriweather', serif;
+        text-transform: none;
+      }
       @include respond-to(phone){
         width: 95%;
         margin: 0;
         bottom:0;
         height: 80%;
         padding: 3rem 2.5%;
+      }
+      .letter-content {
+        position: relative;
       }
       #dear-john {
          font-weight: 700;
@@ -39,9 +45,6 @@
       }
       .signature {
          text-align: right;
-         position: absolute;
-         bottom:0;
-         right:0;
          .sig-box {
            padding-top:8rem;
          }

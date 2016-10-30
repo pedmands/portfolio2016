@@ -1,10 +1,11 @@
 #about {
   transition: all .5s ease-in-out;
   text-align: left;
-  background: #fff;
-  padding: 0;
+  background: $gray4;
+
   overflow-x: hidden;
   position: relative;
+  color: #fff;
   .bio-belt {
     @include clearfix;
     transition: all .4s ease-out;
@@ -18,8 +19,8 @@
     float: left;
     width: 50%;
   }
-  h1 {
-    color:#444;
+  .section-title {
+    color:#fff;
   }
   .face-lockup {
     margin: 0 auto;
@@ -30,7 +31,7 @@
     .face-image {
       height: 200px;
       width: 200px;
-      border: .5rem solid $orange;
+
       border-radius: 50%;
       background: url(/assets/img/face.png);
       background-position: center;
@@ -43,7 +44,7 @@
     width: 150px;
     text-align: center;
     path {
-      fill: #555;
+      fill: $orange;
     }
     .path {
       overflow: hidden !important;
@@ -52,13 +53,14 @@
       height: 100px;
       width: 100px;
       border-radius: 50%;
-      background-color: $orange;
-      border: 1px solid #ddd;
+      background-color: $gray5;
+
     }// .path
     strong {
       display: block;
       text-transform: uppercase;
-      color: #555;
+      color: $gray2;
+      margin-top:1rem;
       font-weight: normal;
       font-size: 1.5rem;
       font-family: "Raleway", sans-serif;
@@ -98,7 +100,7 @@
       overflow: hidden;
       svg {
         transform: scale(.75);
-        fill: #464646;
+        fill: $gray3;
         overflow: hidden;
         width:85px;
         height:55px;
@@ -115,8 +117,9 @@
       display: inline-block;
       overflow: hidden;
       vertical-align: middle;
+      cursor: pointer;
       svg {
-        fill: #464646;
+        fill: $gray3;
       }
       &.toggled {
         transform: scale(1);
@@ -149,7 +152,8 @@
   @media only screen and (min-width: $bp-tablet){
     .blurb {
       margin: 3rem auto;
-      margin-bottom: 0;
+      font-size: 1.5rem;
+      letter-spacing: .5px;
       p {
         margin-bottom: 0;
       }

@@ -218,7 +218,9 @@
   justify-content: center;
   .resume-tab {
     @include buttonWipe;
-    transition: color .2s ease-in-out, transform .2s ease-out;
+    transition: all .3s ease-in-out;
+    background-size: 0 .3rem;
+    background-position: bottom;
     display: inline-block;
     font-family: "Raleway", sans-serif;
     font-weight: 600;
@@ -235,6 +237,7 @@
       display: none;
     }
     &.active-tab {
+      transition: all .3s ease-in-out;
       @include thickerUnderline($blue, $darkGray);
       @media screen and (max-width: $bp-tablet){
         display: block;
@@ -242,6 +245,7 @@
         max-width: 20rem;
         margin: 0 auto;
         font-size: 2.25rem;
+        padding-bottom:2rem;
       }
     }
     &:hover {

@@ -60,12 +60,6 @@ fullWidth();
     return false;
   });
 
-  ////// ON SCROLL //////
-  $(window).scroll(function() {
-  	navBg();
-    coverLetter();
-  });
-
 // Give nav a bg when scrolled passed cover letter
 function navBg(){
   var mbg = $(".menu-bg");
@@ -77,21 +71,9 @@ function navBg(){
 		mbg.removeClass(mbgs);
 	}
 }
-// Parallax cover-letter
-function coverLetter(){
-  var letter = $('.cover-letter');
-  var s = $(this).scrollTop(),
-      d = $(document).height(),
-      c = $(this).height();
-      scrollPercent = (s / (d - c));
-
-       var position = -((scrollPercent * ($(document).height() - letter.height()))*1);
-
-       letter.css({
-           'top': position
-         });
-}
-
+$(window).scroll(function() {
+  navBg();
+});
 
 // Nav Highlighting
 $(window).scroll(function(){
@@ -155,6 +137,7 @@ $(function() {
     }
   });
 });
+
 
 
 function workBelt() {

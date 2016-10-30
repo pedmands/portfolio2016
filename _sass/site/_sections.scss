@@ -1,5 +1,5 @@
 section {
-  padding:0 5rem;
+  padding: 5rem 0;
   text-align: center;
   @media only screen and (max-width:$bp-laptop){
     padding:0;
@@ -62,7 +62,14 @@ section {
 #social-1 {
   background-color: #252525;
   text-align: center;
-  color: #444444;
+  padding: 5rem 0;
+  a{
+    transition: all .4s ease-out;
+    color: $gray3;
+    &:hover {
+      color:$gray2;
+    }
+  }
   i {
     margin: 2rem 9rem;
     font-size: 6rem;

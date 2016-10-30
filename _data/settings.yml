@@ -9,6 +9,10 @@ projects:
   - {name: Survivor Speak, category: Graphic Design, folder: 'proj-6'}
   - {name: Topical Roots, category: WordPress, folder: 'proj-7'}
   - {name: White Noise, category: WordPress, folder: 'proj-8'}
+  - {name: White Noise, category: WordPress, folder: 'proj-9'}
+  - {name: White Noise, category: WordPress, folder: 'proj-10'}
+  - {name: White Noise, category: WordPress, folder: 'proj-11'}
+  - {name: White Noise, category: WordPress, folder: 'proj-12'}
 
 # clients
 clients:
@@ -34,5 +38,5 @@ clients:
     company: United Pants, Inc,
     project: 'proj-1',
     folder: 'client-3',
-    quote: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.' 
+    quote: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.'
     }

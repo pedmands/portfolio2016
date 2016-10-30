@@ -3,7 +3,7 @@
   background-color: $gray3;
   padding-bottom: 5rem;
   overflow-x:hidden;
-  padding:0;
+
   .work-belt {
     transition: all .4s ease-in;
     width:200%;
@@ -126,10 +126,8 @@
   }// .thumb-container
   .work-container {
     @include clearfix;
-    max-width:60rem;
-    padding: 4rem;
+    max-width:70rem;
     margin:0 auto;
-
     margin-bottom: 3rem;
     position: relative;
     display: none;
@@ -145,9 +143,13 @@
       max-width: 100%;
       margin-bottom: 2rem;
     }
+    .project-load {
+      padding: 2rem;
+    }
     .work-title {
+      position: relative;
       margin-bottom:4rem;
-      padding-bottom: 2rem;
+      padding: 2rem;
       border-bottom: 1px solid $gray2;
       @include respond-to(tablet){
         margin-bottom:2rem;
@@ -173,26 +175,42 @@
     }
     p {padding:1rem;}
     .work-return {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
       transition: all .3s ease-out;
       cursor: pointer;
       font-size: 4rem;
       color: $gray2;
-      margin-right: 2rem;
-      vertical-align: middle;
       &:hover {
         color:$gray3;
       }
     }// .work-return
     #bottom-button {
       @include buttonWipe;
-      text-align: center;
+
+      padding-right:2rem;
+      cursor: pointer;
       padding-top:2rem;
       border-top: 1px solid $gray2;
-      margin-top:3rem;
       font-family: "Raleway", sans-serif;
       text-transform: uppercase;
       font-size: 1em;
       font-weight: 600;
+      &:hover {
+        &:before {
+          color: $gray3;
+        }
+      }
+      &:before {
+        transition: all .3s ease-out;
+        font-family: FontAwesome;
+        content: '\f137';
+        font-size: 4rem;
+        color: $gray2;
+        vertical-align: middle;
+        margin-right:2rem;
+      }
       @include respond-to(phone){
         margin-left: 1rem;
       }

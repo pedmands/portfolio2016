@@ -1,6 +1,6 @@
 #clients {
-  background-color: #444;
-  padding:0;
+  background-color: $gray3;
+  
   .section-header {
     .section-title {
       color:#e5eaee;
@@ -10,7 +10,8 @@
   .clients-container {
     margin: 0 auto;
     max-width: 100rem;
-    display: flex;
+    display: table;
+    table-layout: fixed;
     @media screen and (max-width: $bp-tablet){
       display: block;
     }
@@ -23,12 +24,16 @@
         margin: 0 auto;
         min-height: 1rem;
       }
+      @media screen and (min-width: $bp-tablet){
+        display: table-cell;
+        width: 33%;
+      }
       max-width: 40rem;
       min-height: 50rem;
       text-align: center;
       .client-face {
         box-shadow: -2px -2px 0 rgba(0,0,0,.4), 2px 2px rgba(255,255,255,.15);
-        margin: 2rem auto 1rem;
+        margin: 0 auto 1rem;
         width: 170px;
         height: 170px;
         border-radius: 50%;
@@ -68,9 +73,9 @@
           content: '\f10d';
           font-size: 4rem;
           position: absolute;
-          top: 0;
+          top: -1rem;
           left: 0;
-          color: rgba(255,255,255,.2);
+          color: $gray2;
           @media screen and (max-width: $bp-tablet){
             top: -1.5rem;
           }
