@@ -9,14 +9,12 @@
   margin: 0 auto;
   max-width: 51rem;
   position: relative;
-
   .cover-letter {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background: $gray1;
     max-width: 50rem;
-    margin: 0 auto;
     padding: 4rem;
     box-shadow: -3px 4px 5px rgba(0,0,0,.4);
     z-index: 100;
@@ -24,44 +22,116 @@
         font-family: 'Merriweather', serif;
         text-transform: none;
       }
-      @include respond-to(phone){
-        width: 95%;
-        margin: 0;
-        bottom:0;
-        height: 80%;
-        padding: 3rem 2.5%;
+    @include respond-to(phone){
+      width: 95%;
+      top: 70px;
+      transform: none;
+      height: 80%;
+      padding: 3rem 2.5%;
+    }
+    .letter-content {
+      position: relative;
+      p {
+        margin-bottom:7rem;
       }
-      .letter-content {
-        position: relative;
-      }
-      #dear-john {
-         font-weight: 700;
+    }
+    #dear-john {
+       font-weight: 700;
+       font-style: italic;
+       margin-bottom: 25px;
+    }// #dear-john
+    #sincerely {
+       text-align: right;
+       font-style: italic;
+    }
+    .signature {
+       text-align: right;
+       #date {
          font-style: italic;
-         margin-bottom: 25px;
-      }// #dear-john
-      #sincerely {
-         text-align: right;
-         font-style: italic;
-      }
-      .signature {
-         text-align: right;
-         .sig-box {
-           padding-top:8rem;
-         }
-         #date {
-           font-style: italic;
-         }
-      }// .signature
-      .dropcap {
-        float: left;
-        color: #999;
-        font-size: 75px;
-        line-height: 60px;
-        padding-top: 4px;
-        padding-right: 8px;
-        padding-left: 3px;
-        font-weight: 400;
-        font-family: 'Oswald';
-      }//dropcap
-   }// .cover-letter
+       }
+    }// .signature
+    .dropcap {
+      float: left;
+      color: #999;
+      font-size: 75px;
+      line-height: 60px;
+      padding-top: 4px;
+      padding-right: 8px;
+      padding-left: 3px;
+      font-weight: 400;
+      font-family: 'Oswald';
+    }//dropcap
+  }// .cover-letter
 }// #home
+
+
+// Signature Styles
+#signature {
+  width:200px;
+}
+.st0{
+  fill:none;
+  stroke-width:6;
+  stroke-miterlimit:10;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.stroke-P {
+  stroke: none;
+}
+.stroke-P.animated {
+  stroke:$blue;
+  stroke-dasharray: 762;
+  animation: write1 2.5s ease-in-out;
+}
+.stroke-reston {
+  stroke: none;
+}
+.stroke-reston.animated{
+  stroke:$blue;
+  stroke-dasharray: 1390;
+  animation: write2 2.5s ease-in-out;
+}
+.stroke-cross {
+  stroke: none;
+}
+.stroke-cross.animated {
+  stroke:$blue;
+  stroke-dasharray: 348;
+  animation: write3 2.5s ease-in-out;
+}
+
+@keyframes write1 {
+  0% {
+    stroke-dashoffset: 762;
+  }
+  4%, 7% {
+    stroke-dashoffset: 587;
+  }
+  13% {
+    stroke-dashoffset: 287;
+  }
+  17% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes write2 {
+  0%, 23% {
+    stroke-dashoffset: 1390;
+  }
+
+  50% {
+    stroke-dashoffset: 900;
+  }
+  85% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes write3 {
+  0%, 90% {
+    stroke-dashoffset: 348;
+  }
+  93% {
+    stroke-dashoffset: 0;
+  }
+}

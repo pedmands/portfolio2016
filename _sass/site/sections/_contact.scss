@@ -2,6 +2,10 @@
   @include clearfix;
   background: url('assets/img/header.png');
   background-position: right bottom;
+  .section-header {
+    margin-bottom: 3rem;
+    padding-top: 0;
+  }
   .section-title {
     color: #fff;
   }

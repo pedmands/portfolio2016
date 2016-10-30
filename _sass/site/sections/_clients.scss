@@ -1,10 +1,8 @@
 #clients {
   background-color: $gray3;
-  
   .section-header {
     .section-title {
       color:#e5eaee;
-
     }
   }// .section-header
   .clients-container {
@@ -40,7 +38,7 @@
         background-size: cover;
       }// .client-face
       .client-name {
-        color: $orange;
+        color: #fff;
         font-size: 2rem;
         @media screen and (max-width: $bp-tablet){
           font-size: 2.25rem;
@@ -61,7 +59,9 @@
         padding: 2rem;
         position: relative;
         margin: 2rem auto 5rem;
+        z-index: 100;
         @media screen and (max-width: $bp-tablet){
+          text-shadow: -2px -1px 0 $gray3;
           margin: 0 auto;
           padding: 1rem;
           padding-top: 1rem;
@@ -76,6 +76,7 @@
           top: -1rem;
           left: 0;
           color: $gray2;
+          z-index:-1;
           @media screen and (max-width: $bp-tablet){
             top: -1.5rem;
           }

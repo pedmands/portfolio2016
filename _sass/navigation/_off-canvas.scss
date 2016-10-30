@@ -6,6 +6,7 @@
 #content {
    width:100%;
    overflow: hidden;
+   position: relative;
    transition: all .4s ease-in;
   -webkit-transform: translateX(0);
   transform: translateX(0);

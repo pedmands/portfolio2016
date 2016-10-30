@@ -35,7 +35,6 @@ fullWidth();
           return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
       }
   };
-
   if (isMobile.any() != true ){
     // adjust height of .fullheight & .fullheight elements on window resize.
     $(window).resize(function() {
@@ -43,6 +42,13 @@ fullWidth();
       fullHeight();
     });
   }
+
+  // Animate signature on scroll
+  $(window).scroll(function(){
+      $('.stroke-P').addClass('animated');
+      $('.stroke-reston').addClass('animated');
+      $('.stroke-cross').addClass('animated');
+    });
 
   // Insert current date into signature portion of Cover letter
   var currentdate = new Date();
@@ -59,6 +65,7 @@ fullWidth();
       $('.logo').toggleClass('fly-out');
     return false;
   });
+
 
 // Give nav a bg when scrolled passed cover letter
 function navBg(){
@@ -138,23 +145,23 @@ $(function() {
   });
 });
 
-
-
 function workBelt() {
   $('.thumb-unit').click(function() {
+    var target = $('#work-wrap');
     $('.work-belt').css('left','-100%');
     $('.work-container').fadeIn();
+
   });
   $('.work-return').click(function(){
-    var target = $('#work');
-    $('html,body').animate({ scrollTop: target.offset().top - 60}, 500);
+    var target = $('#work-title');
+    $('html,body').animate({ scrollTop: target.offset().top - 50}, 500);
     $('.thumb-wrap').fadeIn();
     $('.work-belt').css('left','0');
     $('.work-container').fadeOut();
   });
   $('#bottom-button').click(function(){
-    var target = $('#work');
-    $('html,body').animate({ scrollTop: target.offset().top - 60}, 500);
+    var target = $('#work-title');
+    $('html,body').animate({ scrollTop: target.offset().top - 50}, 500);
     $('.thumb-wrap').fadeIn();
     $('.work-belt').css('left','0');
     $('.work-container').fadeOut();
@@ -173,9 +180,9 @@ function workLoad(){
         newFolder = $this.data('folder'),
         spinner = '<div class="loader">Loading...</div>',
         newHTML = '/work/' + newFolder + '.html',
-        target = $('#work');
+        target = $('#work-wrap');
     $('.project-load').html(spinner).load(newHTML);
-    $('html,body').animate({ scrollTop: target.offset().top - 60}, 500);
+    $('html,body').animate({ scrollTop: target.offset().top - 60}, 550);
     $('.project-title').text(newTitle);
     $('.project-cat').text(newCat);
   });
