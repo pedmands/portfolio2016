@@ -1,9 +1,8 @@
 #clients {
   background-color: $gray3;
-
   .section-header {
     .section-title {
-      color:#e5eaee;
+      color:$gray5;
     }
   }// .section-header
   .clients-container {
@@ -41,7 +40,6 @@
           display: block;
           height: 100%;
           width:100%;
-          @include graySteel;
           padding-top: 2rem;
         }
       }
@@ -60,7 +58,6 @@
       }// .client-face
       .client-details {
         @include respond-to(phone){
-          @include graySteel;
           display: block;
           width:100%;
           padding: 1rem 0;
@@ -68,12 +65,11 @@
         @include respond-to(tablet){
           display: block;
           width:100%;
-          background: $pink;
           padding: 1rem 0;
         }
       }
       .client-name {
-        color: $gray3;
+        color: $gray1;
         font-size: 2rem;
         @media screen and (max-width: $bp-tablet){
           font-size: 2.25rem;
@@ -83,7 +79,7 @@
         display: inline-block;
         font-family: "Merriweather", serif;
         font-weight: 300;
-        color: $gray3;
+        color: $gray1;
         text-transform: none;
         font-style: italic;
         @media screen and (max-width: $bp-tablet){
@@ -91,22 +87,24 @@
         }
       }// .client-title, .client-company
       .testimonial {
-        color: #eee;
+        @include ghostOutline($gray5, .1, 2px);
+        color:#fff;
         padding: 2rem;
         padding-bottom:5rem;
         position: relative;
         margin: 2rem auto 5rem;
         z-index: 100;
         font-weight: 300;
-        text-shadow: -2px -1px 0 $gray3;
         &:last-child {
           margin-bottom: 0;
         }
         @include respond-to(phone){
           margin: 1rem 0 2rem;
           text-align: left;
+          text-shadow: none;
         }
         @include respond-to(tablet){
+          text-shadow: none;
           margin: 3rem auto 0;
           padding: 4rem;
           padding-top: 0;
@@ -117,18 +115,18 @@
         &:before {
           font-family: FontAwesome;
           content: '\f10d';
-          font-size: 3rem;
+          font-size: 4rem;
           position: absolute;
           top: 0;
-          left: .5rem;
-          color: $gray2;
+          left: 0;
+          color: rgba($pink,.5);
           z-index:-1;
+          text-shadow: none;
           @include respond-to(phone){
             top: -3.5rem;
             left: 1.5rem;
             font-size: 4rem;
-            color: $pink;
-            @include textOutline2($pink, $gray3, 1.5);
+            // @include textOutline2($pink, $gray3, 1.5);
           }
           @include respond-to(tablet){
             top: -2rem;
@@ -142,8 +140,6 @@
   .separator.size-small.bottom-margin {
     margin-bottom: 3rem;
     display: block;
-    @media screen and (min-width:$bp-tablet){
-      display: none;
-    }
+
   }
 }// #clients

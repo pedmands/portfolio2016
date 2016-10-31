@@ -34,9 +34,6 @@ $(document).html('<div class="loader">Loading...</div>').ready(function() {
   }, 500);
   });
 
-
-
-
   // Insert current date into signature portion of Cover letter
   var currentdate = new Date();
   var datetime = (currentdate.getMonth()+1)+"/"+currentdate.getDate()+"/"+currentdate.getFullYear();

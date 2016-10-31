@@ -35,6 +35,16 @@
   }
 }
 
+@mixin ghostOutline($color: $gray1, $opacity: .5, $stroke: 1px){
+  text-shadow:
+    (-$stroke) (-$stroke) 0 rgba($color,$opacity),
+       0 (-$stroke) 0 rgba($color,$opacity),
+     $stroke (-$stroke) 0 rgba($color,$opacity),
+    (-$stroke)  $stroke 0 rgba($color,$opacity),
+       0  $stroke 0 rgba($color,$opacity),
+     $stroke  $stroke 0 rgba($color,$opacity);
+}
+
 @mixin textOutline($textColor:$pink, $outlineColor:$gray3, $stroke: 1){
   color: $textColor;
   text-shadow:

@@ -21,7 +21,7 @@
     }// i
   }// #social-2
   .big-mail {
-    @include thickerUnderline($gray1,$pink,$purple,1px,3px);
+    @include thickerUnderline($gray1,$pink,1px,3px);
     transition: all .3s ease-in-out;
     font-size: 3rem;
     font-weight: 600;

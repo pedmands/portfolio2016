@@ -16,20 +16,20 @@
   backface-visibility: hidden;*/
 }
 .show-nav #content {
-  -webkit-transform: translateX(300px);
-  transform: translateX(300px);
+  -webkit-transform: translateX(260px);
+  transform: translateX(260px);
 
-  transform: translate3d(300px, 0, 0);
-  -webkit-transform: translate3d(300px, 0, 0);
+  transform: translate3d(260px, 0, 0);
+  -webkit-transform: translate3d(260px, 0, 0);
 }
 #menu {
   background: url('assets/img/header.png');
   background-position: right bottom;
   background-color: $pink;
   transition: all .4s ease-in;
-	width: 300px;
+	width: 260px;
 	position: fixed;
-	left: -300px;
+	left: -260px;
 	top: 0;
   height:100%;
   overflow: visible;
