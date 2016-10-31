@@ -22,3 +22,13 @@ background: linear-gradient(to right,  rgba($color,0) 0%,rgba($color,0.8) 35%,rg
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00dadada', endColorstr='#dadada',GradientType=1 ) !important; /* IE6-9 */
 
 }
+
+@mixin graySteel {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#777777+0,cccccc+20,efefef+45,efefef+55,cccccc+80,777777+100 */
+background: rgb(119,119,119); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(119,119,119,1) 0%, rgba(204,204,204,1) 20%, rgba(239,239,239,1) 45%, rgba(239,239,239,1) 55%, rgba(204,204,204,1) 80%, rgba(119,119,119,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(119,119,119,1) 0%,rgba(204,204,204,1) 20%,rgba(239,239,239,1) 45%,rgba(239,239,239,1) 55%,rgba(204,204,204,1) 80%,rgba(119,119,119,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(119,119,119,1) 0%,rgba(204,204,204,1) 20%,rgba(239,239,239,1) 45%,rgba(239,239,239,1) 55%,rgba(204,204,204,1) 80%,rgba(119,119,119,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#777777', endColorstr='#777777',GradientType=1 ); /* IE6-9 */
+
+}

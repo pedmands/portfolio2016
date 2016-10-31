@@ -1,16 +1,20 @@
 <section id="clients">
    <header class="section-header text-light">
       <h2 class="section-title">Clients</h2>
-      <div class="separator size-small"><span></span></div>
+      <div class="separator size-small bottom-margin"><span></span></div>
    </header>
-   <div class="clients-container">
+   <div class="clients-container text-light">
      {% for client in site.data.settings.clients %}
      <div class="client">
-       <div class="client-face" data-folder="{{client.folder}}" style="background-image: url(/assets/img/clients/{{client.folder}}/face.png)"> </div>
-           <h3 class="client-name">{{ client.name }}</h3>
-           <h4 class="client-title">{{ client.title }},</h4> <h4 class="client-company">{{ client.company }}</h4>
+       <span class="face-bg">
+         <div class="client-face text-light" data-folder="{{client.folder}}" style="background-image: url(/assets/img/clients/{{client.folder}}/face.png)"> </div>
+       </span>
+       <span class="client-details">
+         <h3 class="client-name">{{ client.name }}</h3>
+         <h4 class="client-title">{{ client.title }},</h4> <h4 class="client-company">{{ client.company }}</h4>
+       </span>
            <blockquote class="testimonial">{{ client.quote }}</blockquote>
-
+            <!-- <div class="separator size-small bottom-margin"><span></span></div> -->
      </div>
      {% endfor %}
    </div><!-- clients-container -->

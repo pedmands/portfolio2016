@@ -2,10 +2,11 @@
 #resume {
   transition: all 1s ease-out;
   position: relative;
-  background-color: $darkGray;
+  background-color: $gray4;
   color: white;
   height:100%;
   min-height:75rem;
+  padding-bottom: 3em;
   .section-header {
     margin-bottom: 2rem;
 
@@ -40,8 +41,9 @@
           &:last-child{display: none;}
         }
         @include respond-to(tablet){
-          padding: 0 1rem;
+          padding: 0 .5rem;
           margin: 0 auto;
+          font-size: 1.4rem;
         }
         @include respond-to(phone){
           display: block;
@@ -84,7 +86,8 @@
           }// .location
         }// h5
         ul{
-          font-family: "Merriweather";
+          font-family: "Merriweather", serif;
+          font-weight: 300;
           text-align: left;
           list-style-type:  none;
           line-height: 1.5;
@@ -130,24 +133,31 @@
           }// li:before
           a {
             color: $blue;
-            @include thickUnderline($blue, $darkGray);
+            padding-bottom:2px;
+            @include thickerUnderline($gray3,$blue,$gray4,1px,3px);
+            transition: all .3s ease-in-out;
             text-decoration: none;
-            &:hover {
-              background: none;
-              color: lighten($blue,10%) !important;
-            }
+            position: relative;
             &:visited {
-              color: $gray2;
+                @include thickerUnderline($gray2, $blue, $gray4);
+                color: $gray2;
+            }
+            &:hover {
+              color: lighten($blue,10%);
             }
           }// li a
-          [href^="http"]:not([href*="localhost"])::after {
-            display: inline-block;
-            width: 1em; height: 1em;
-            font-family: FontAwesome;
-            font-size: 1.5rem;
-            margin-left: .25rem;
-            padding-bottom: .5rem;
-            content: '\f08e';
+          [href^="http"]:not([href*="localhost"]){
+            margin-right: 1.5rem;
+            &:after {
+              display: block;
+              width: 1em; height: 1em;
+              font-family: FontAwesome;
+              font-size: 1.2rem;
+              position: absolute;
+              right: -1.5rem;
+              top:0;
+              content: '\f08e';
+            }
           }
         }// li
       }//ul
@@ -225,7 +235,7 @@
     font-family: "Raleway", sans-serif;
     font-weight: 600;
     font-size: 1.5rem;
-    color: #fff;
+    color: $gray2;
     padding: 1.5rem;
     margin: 1.5rem;
     margin-top: 0;
@@ -238,7 +248,8 @@
     }
     &.active-tab {
       transition: all .3s ease-in-out;
-      @include thickerUnderline($blue, $darkGray);
+      color:$gray1;
+      @include thickUnderline($blue, $darkGray);
       @media screen and (max-width: $bp-tablet){
         display: block;
         width: 80%;

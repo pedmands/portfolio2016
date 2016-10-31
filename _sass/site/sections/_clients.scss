@@ -1,5 +1,6 @@
 #clients {
   background-color: $gray3;
+
   .section-header {
     .section-title {
       color:#e5eaee;
@@ -7,47 +8,82 @@
   }// .section-header
   .clients-container {
     margin: 0 auto;
-    max-width: 100rem;
+    max-width: 90%;
     display: table;
     table-layout: fixed;
     @media screen and (max-width: $bp-tablet){
       display: block;
+      max-width:100%;
     }
-    align-items: center;
-    justify-content: space-around;
-
+    @media screen and (min-width: $bp-tablet + 1) and (max-width: $bp-laptop){
+      max-width: 100%;
+    }
     .client {
-      @media screen and (max-width: $bp-tablet){
-        display: block;
-        margin: 0 auto;
-        min-height: 1rem;
-      }
-      @media screen and (min-width: $bp-tablet){
-        display: table-cell;
-        width: 33%;
-      }
-      max-width: 40rem;
       min-height: 50rem;
       text-align: center;
+      display: table-cell;
+      width: 33%;
+      padding: 0 2rem;
+      @media screen and (max-width: $bp-tablet){
+        display: block;
+        width:100%;
+        margin: 0 auto;
+        min-height: 1rem;
+        max-width:100%;
+        padding: 0;
+      }
+      @media screen and (min-width: $bp-tablet + 1) and (max-width:$bp-laptop){
+        padding: 0;
+        font-size: 1.4rem;
+      }
+      .face-bg {
+        @media screen and (max-width: $bp-tablet){
+          display: block;
+          height: 100%;
+          width:100%;
+          @include graySteel;
+          padding-top: 2rem;
+        }
+      }
       .client-face {
+        background: $gray4;
         box-shadow: -2px -2px 0 rgba(0,0,0,.4), 2px 2px rgba(255,255,255,.15);
-        margin: 0 auto 1rem;
+        margin: 0 auto;
         width: 170px;
         height: 170px;
         border-radius: 50%;
         background-size: cover;
+        @media screen and (max-width:$bp-tablet){
+          width:200px;
+          height:200px;
+        }
       }// .client-face
+      .client-details {
+        @include respond-to(phone){
+          @include graySteel;
+          display: block;
+          width:100%;
+          padding: 1rem 0;
+        }
+        @include respond-to(tablet){
+          display: block;
+          width:100%;
+          background: $pink;
+          padding: 1rem 0;
+        }
+      }
       .client-name {
-        color: #fff;
+        color: $gray3;
         font-size: 2rem;
         @media screen and (max-width: $bp-tablet){
           font-size: 2.25rem;
         }
-      }
+      }// .client-name
       .client-title, .client-company {
         display: inline-block;
-        font-family: "Noto Serif", serif;
-        color: #ddd;
+        font-family: "Merriweather", serif;
+        font-weight: 300;
+        color: $gray3;
         text-transform: none;
         font-style: italic;
         @media screen and (max-width: $bp-tablet){
@@ -57,31 +93,57 @@
       .testimonial {
         color: #eee;
         padding: 2rem;
+        padding-bottom:5rem;
         position: relative;
         margin: 2rem auto 5rem;
         z-index: 100;
-        @media screen and (max-width: $bp-tablet){
-          text-shadow: -2px -1px 0 $gray3;
-          margin: 0 auto;
-          padding: 1rem;
-          padding-top: 1rem;
-          padding-bottom: 5rem;
+        font-weight: 300;
+        text-shadow: -2px -1px 0 $gray3;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        @include respond-to(phone){
+          margin: 1rem 0 2rem;
+          text-align: left;
+        }
+        @include respond-to(tablet){
+          margin: 3rem auto 0;
+          padding: 4rem;
+          padding-top: 0;
+          max-width: 66.6%;
           font-size: 1.75rem;
+          text-align: left;
         }
         &:before {
           font-family: FontAwesome;
           content: '\f10d';
-          font-size: 4rem;
+          font-size: 3rem;
           position: absolute;
-          top: -1rem;
-          left: 0;
+          top: 0;
+          left: .5rem;
           color: $gray2;
           z-index:-1;
-          @media screen and (max-width: $bp-tablet){
-            top: -1.5rem;
+          @include respond-to(phone){
+            top: -3.5rem;
+            left: 1.5rem;
+            font-size: 4rem;
+            color: $pink;
+            @include textOutline2($pink, $gray3, 1.5);
           }
-        }
-      }
+          @include respond-to(tablet){
+            top: -2rem;
+            left: 1rem;
+          }
+        }// &:before
+      }// .testimonial
+
     }// .client
   }// .clients-container
+  .separator.size-small.bottom-margin {
+    margin-bottom: 3rem;
+    display: block;
+    @media screen and (min-width:$bp-tablet){
+      display: none;
+    }
+  }
 }// #clients

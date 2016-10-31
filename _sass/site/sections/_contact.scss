@@ -21,14 +21,21 @@
     }// i
   }// #social-2
   .big-mail {
-    @include thickerUnderline($blue,$purple);
-    transition: all .3s ease-in;
+    @include thickerUnderline($gray1,$pink,$purple,1px,3px);
+    transition: all .3s ease-in-out;
     font-size: 3rem;
+    font-weight: 600;
     color: $gray1;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Raleway", sans-serif;
+    letter-spacing: -.05rem;
     text-decoration: none;
     &:hover {
-      color: $blue;
+      color: $pink;
+    }
+    .at-sign {
+      font-family: At;
+      margin: 0 .2rem;
+      font-weight: bold;
     }
   }// .big-mail
   form {
@@ -82,7 +89,7 @@
     }
     input[type="submit"]{
       transition: all .2s ease-in-out;
-      background:$blue;
+      background:$purple;
       box-shadow: none;
       text-shadow: none;
       border: none;
@@ -97,7 +104,7 @@
       font-size: 2rem;
       &:hover {
         box-shadow: none;
-        background: darken($blue, 10%);
+        background: darken($purple, 10%);
       }
       @media screen and (max-width: $bp-tablet){
         display: block;

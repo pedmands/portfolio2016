@@ -1,0 +1,15 @@
+a {
+  color: $blue;
+  [href^="http"]:not([href*="localhost"])::after {
+    display: inline-block;
+    width: 1em; height: 1em;
+    font-family: FontAwesome;
+    font-size: 1.5rem;
+    margin-left: .25rem;
+    padding-bottom: .5rem;
+    content: '\f08e';
+  }
+  &:visited {
+    color: $gray2;
+  }
+}

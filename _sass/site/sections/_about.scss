@@ -2,7 +2,6 @@
   transition: all .5s ease-in-out;
   text-align: left;
   background: $gray4;
-
   overflow-x: hidden;
   position: relative;
   color: #fff;
@@ -60,6 +59,7 @@
       display: block;
       text-transform: uppercase;
       color: $gray2;
+      text-shadow: 1px 1px 0 #000;
       margin-top:1rem;
       font-weight: normal;
       font-size: 1.5rem;
@@ -83,6 +83,8 @@
     max-width: 60rem;
     padding: 1rem;
     font-size: 1.75rem;
+    font-family: "Merriweather", serif;
+    font-weight: 300;
   }// .blurb
   .about-toggle-box {
     display: block;

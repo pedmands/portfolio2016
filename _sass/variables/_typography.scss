@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,900, 900i|Oswald:400|Concert+One:text=ABCDEFGHIJKLMNOPQRSTUVWXYZ|Raleway:400,400i,600,800');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,900, 900i|Raleway:400,400i,600,800');
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
 body {}
 p {
-   font-family: 'Merriweather';
+   font-family: 'Merriweather', serif;
+   font-weight: 300;
 }
 h1, h2, h3, h4, h5 {
-   font-family: 'Raleway';
+   font-family: 'Raleway', sans-serif;
    font-weight: 800;
    text-transform: uppercase;
 }

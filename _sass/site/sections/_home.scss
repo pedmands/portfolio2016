@@ -15,7 +15,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: $gray1;
+    background: $pastel;
     max-width: 50rem;
     padding: 4rem;
     box-shadow: -3px 4px 5px rgba(0,0,0,.4);
@@ -34,7 +34,7 @@
     .letter-content {
       position: relative;
       p {
-        margin-bottom:7rem;
+      
       }
     }
     #dear-john {
@@ -54,7 +54,7 @@
     }// .signature
     .dropcap {
       float: left;
-      color: #999;
+      color: $pink;
       font-size: 75px;
       line-height: 60px;
       padding-top: 4px;
@@ -121,9 +121,14 @@
   0%, 23% {
     stroke-dashoffset: 1390;
   }
-
-  50% {
+  40% {
     stroke-dashoffset: 900;
+  }
+  50% {
+    stroke-dashoffset: 700;
+  }
+  55% {
+    stroke-dashoffset: 600;
   }
   85% {
     stroke-dashoffset: 0;

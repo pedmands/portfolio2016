@@ -9,7 +9,7 @@ textarea {
     font-size: 1.6rem;
     line-height: 1.5;
 }
- 
+
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
     clear: both;
@@ -20,7 +20,7 @@ hr {
     height: 1px;
     margin-bottom: 1.5em;
 }
- 
+
 /* Text elements */
 p {
     margin-bottom: 1.5em;
@@ -204,17 +204,4 @@ textarea {
     padding-left: 3px;
     vertical-align: top; /* Improves readability and alignment in all browsers */
     width: 98%;
-}
- 
-/* Links */
-a {
-    color: royalblue;
-}
-a:visited {
-    color: purple;
-}
-a:hover,
-a:focus,
-a:active {
-    color: midnightblue;
 }

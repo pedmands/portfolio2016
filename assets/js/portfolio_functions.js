@@ -26,13 +26,16 @@ $(document).html('<div class="loader">Loading...</div>').ready(function() {
     }
   });
 
-
-  // Animate signature on scroll
   $(window).scroll(function(){
-      $('.stroke-P').addClass('animated');
-      $('.stroke-reston').addClass('animated');
-      $('.stroke-cross').addClass('animated');
-    });
+    setTimeout( function(){
+    $('.stroke-P').addClass('animated');
+    $('.stroke-reston').addClass('animated');
+    $('.stroke-cross').addClass('animated');
+  }, 500);
+  });
+
+
+
 
   // Insert current date into signature portion of Cover letter
   var currentdate = new Date();
@@ -95,7 +98,7 @@ $(window).scroll(function() {
 $(window).scroll(function(){
   var windowPos = $(window).scrollTop() + 60,
       bgDecorated = {'background':'#DADADA'},
-      textDecorated = {'color':'#eb868c'},
+      textDecorated = {'color':'#f54ca3'},
       bgPlain = {'background':'none'},
       textPlain = {'color':'#DADADA'};
   $('nav li').css(bgPlain);
@@ -192,7 +195,7 @@ function workLoad(){
     $('.project-load').html(spinner).load(newHTML);
     $('.project-title').text(newTitle);
     $('.project-cat').text(newCat);
-    if (windowPos > $('#work-title').offset().top){
+    if (windowPos > $('#work-link').offset().top){
       $('html,body').animate({ scrollTop: target.offset().top - 60}, 500);
     } else {
       $('html,body').animate({ scrollTop: target.offset().top }, 500);
