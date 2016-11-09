@@ -89,8 +89,7 @@
   .about-toggle-box {
     display: block;
     text-align: center;
-    margin: 0 auto;
-    margin-bottom: 3rem;
+    margin: 3rem auto 1rem;
     .about-toggle {
       box-shadow: none;
       border: none;
@@ -118,13 +117,13 @@
       height: 80px;
       display: inline-block;
       overflow: hidden;
-      vertical-align: middle;
+      vertical-align: top;
       cursor: pointer;
       svg {
         fill: $gray3;
       }
       &.toggled {
-        transform: scale(1);
+        transform: scale(1.1);
         svg {
           fill: $orange;
         }
@@ -153,7 +152,7 @@
   }// media max-width: $bp-tablet
   @media only screen and (min-width: $bp-tablet){
     .blurb {
-      margin: 3rem auto 2rem;
+
       font-size: 1.5rem;
       letter-spacing: .5px;
       p {
