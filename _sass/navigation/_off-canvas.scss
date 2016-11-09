@@ -15,13 +15,13 @@
   /*-webkit-backface-visibility: hidden;
   backface-visibility: hidden;*/
 }
-.show-nav #content {
-  -webkit-transform: translateX(260px);
-  transform: translateX(260px);
-
-  transform: translate3d(260px, 0, 0);
-  -webkit-transform: translate3d(260px, 0, 0);
-}
+// .show-nav #content {
+//   -webkit-transform: translateX(260px);
+//   transform: translateX(260px);
+//
+//   transform: translate3d(260px, 0, 0);
+//   -webkit-transform: translate3d(260px, 0, 0);
+// }
 #menu {
   background: url('assets/img/header.png');
   background-position: right bottom;
@@ -30,7 +30,7 @@
 	width: 260px;
 	position: fixed;
 	left: -260px;
-	top: 0;
+	top: 70px;
   height:100%;
   overflow: visible;
   z-index:100;
@@ -42,12 +42,12 @@
   transition: all .3s ease-in-out;
    width: 70px;
    height: 70px;
-   position: absolute;
-   right:-70px;
+   position: fixed;
+   left:0;
    top:0;
 }
 #menu-toggle.hide {
-  top: -70px;
+  // top: -70px;
 }
 #menu-toggle.toggled.hide {
   top: 0;
