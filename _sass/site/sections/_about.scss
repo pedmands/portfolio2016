@@ -22,7 +22,7 @@
     color:#fff;
   }
   .skills-lockup {
-    margin: 0 auto;
+    margin: 1rem auto;
     max-width: 90rem;
     display: flex;
     align-items: center;
@@ -38,6 +38,7 @@
     margin: 0 auto;
   }// .face-image
   [class^="icon-"]{
+    position: relative;
     height: 100px;
     width: 150px;
     text-align: center;
@@ -52,15 +53,22 @@
       width: 100px;
       border-radius: 50%;
       background-color: $gray5;
-
+      border: 1px solid $orange;
     }// .path
     strong {
+      position: absolute;
+      bottom:-10px;
+      left:50%;
+      transform: translateX(-50%);
       display: block;
+      background:$gray4;
       text-transform: uppercase;
-      color: $gray2;
+      color: $orange;
       text-shadow: 1px 1px 0 #000;
       margin-top:1rem;
-      font-weight: normal;
+      padding: 2.5px 0;
+      font-weight: 300;
+      font-style: italic;
       font-size: 1.5rem;
       font-family: "Raleway", sans-serif;
     }
@@ -99,7 +107,7 @@
       padding: 0;
       overflow: hidden;
       svg {
-        transform: scale(.75);
+        transform: scale(.5);
         fill: $gray3;
         overflow: hidden;
         width:85px;
@@ -111,7 +119,7 @@
     }// .about-toggle
     [class^='toggle-']{
       transition: all .4s ease-out;
-      transform: scale(.8);
+      transform: scale(.65);
       width: 80px;
       height: 80px;
       display: inline-block;
@@ -122,17 +130,22 @@
         fill: $gray3;
       }
       &.toggled {
-        transform: scale(1.1);
+        transform: scale(1);
         svg {
           fill: $orange;
         }
       }
     }// .toggle-*
+    .toggle-sunglasses {
+      &.toggled {
+        transform:translateY(25px);
+      }
+    }
   }// .about-toggle-box
   @media only screen and (max-width: $bp-phone){
     [class^="icon-"]{
-    transform: scale(.9);
-    margin: 0;
+    transform: scale(1.1);
+
     }
   }// media max-width: $bp-phone
   @media only screen and (max-width: $bp-tablet){
@@ -141,7 +154,7 @@
       text-align: center;
       [class^="icon-"]{
       display: inline-block;
-      margin: 1rem 0;
+      margin-bottom: 3rem;
       }
     }
     .face-image {

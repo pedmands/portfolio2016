@@ -1,5 +1,6 @@
 #clients {
   background-color: $gray3;
+  padding-bottom:4rem;
   .section-header {
     .section-title {
       color:$gray5;
@@ -88,9 +89,8 @@
       .testimonial {
         @include ghostOutline($gray5, .1, 2px);
         padding: 2rem;
-        padding-bottom:5rem;
         position: relative;
-        margin: 2rem auto 5rem;
+        margin: 2rem auto;
         z-index: 100;
         color:#fff;
         font-size: 1.5rem;
@@ -120,7 +120,7 @@
           position: absolute;
           top: 0;
           left: 0;
-          color: rgba($pink,.5);
+          color: $blue;
           z-index:-1;
           text-shadow: none;
           @include respond-to(phone){
@@ -135,7 +135,49 @@
           }
         }// &:before
       }// .testimonial
+    .view-project {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      transition: all .3s ease-in-out;
+      background: $blue;
+      box-shadow: 4px 4px 0 darken($blue, 30%);
+      text-shadow: none;
+      border: none;
+      border-radius: 5px;
+      margin: 0 auto;
+      padding: 20px 30px;
+      text-transform: uppercase;
+      font-family: "Raleway", sans-serif;
 
+      letter-spacing: -.05rem;
+      font-size: 1.75rem;
+      z-index:2;
+      color: white;
+      &:after {
+        transition: all .3s ease-out;
+        display:block;
+        position: absolute;
+        top:-40px;
+        left:-60px;
+        font-family: 'FontAwesome';
+        content: '\f06e';
+        font-size: 28px;
+        z-index:-1;
+        color: darken($blue, 30%);
+      }
+      &:hover {
+      box-shadow: none;
+      padding-left:45px;
+      padding-right:15px;
+      // background: darken($blue, 15%);
+      &:after {
+        top: 50%;
+        transform: translateY(-55%);
+        left:10px;
+      }
+      }
+    }// .view-project
     }// .client
   }// .clients-container
   .separator.size-small.bottom-margin {
