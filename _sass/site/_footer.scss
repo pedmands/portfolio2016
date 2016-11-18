@@ -1,0 +1,19 @@
+footer {
+  background: $gray4;
+  text-align: center;
+  color:$gray2;
+  font-family: "Raleway", sans-serif;
+  padding: 2rem;
+  font-weight: 300;
+  .copyright {
+    font-weight: 500;
+    @include respond-to(phone){
+      display: block;
+    }
+    &:after {
+      content: "//";
+      margin: 5px;
+      color: $gray3;
+    }
+  }
+}

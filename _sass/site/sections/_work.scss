@@ -1,7 +1,6 @@
 #work {
   position: relative;
   background-color: $gray3;
-  padding-bottom: 5rem;
   overflow-x:hidden;
   .work-belt {
     transition: all .4s ease-in;
@@ -54,7 +53,7 @@
       }
       @include respond-to(phone){
         width:100%;
-        padding-top: 58%;
+        padding-top: 54%;
         margin-bottom: 2rem;
         &:nth-child(6),&:nth-child(9),&:nth-child(10),&:nth-child(11),&:nth-child(12){
           display: none;
@@ -62,7 +61,7 @@
       }
       @include respond-to(tablet){
         width:49.25%;
-        padding-top:28%;
+        padding-top:23%;
         &:nth-child(even) {margin-right:0;}
       }
       @include respond-to(laptop){
@@ -90,12 +89,11 @@
           }
         }// &:after
         @include respond-to(phone){
-          // @include inset;
           display: block;
           top:50%;
           transform: translateY(-50%);
           height:auto;
-
+          padding:1.5rem;
         }
         .thumb-title {
           padding-top: 2.5rem;
@@ -106,11 +104,10 @@
           letter-spacing: -.05rem;
           @include respond-to(phone){
             padding-top: 0;
-            margin: 2rem;
           }
           @include respond-to(tablet){
-            font-size: 2.25rem;
-            padding-top: 3.5rem;
+            font-size: 2rem;
+            padding-top: 2rem;
           }
         }
         h4 {
@@ -126,7 +123,7 @@
             font-size: 2rem;
           }
           @include respond-to(phone){
-            display: none;
+            line-height: .5;
           }
         }// h4
       }

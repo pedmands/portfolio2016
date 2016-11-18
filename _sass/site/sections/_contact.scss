@@ -1,5 +1,4 @@
 #contact {
-  padding-bottom: 4rem;
   @include clearfix;
   background: url('assets/img/header.png');
   background-position: right bottom;
@@ -30,10 +29,22 @@
     font-family: "Raleway", sans-serif;
     letter-spacing: -.05rem;
     text-decoration: none;
+    @include respond-to(phone){
+      display: block;
+      color:white;
+      background: none;
+    }
     &:hover {
       color: white;
+      @include respond-to(phone){
+        color:$pink;
+        background: none;
+      }
       .at-sign {
         background: $pink;
+        @include respond-to(phone){
+          background:none;
+        }
       }
     }
     .at-sign {
@@ -49,6 +60,13 @@
       font-size: 8rem;
       font-weight: normal;
       vertical-align: middle;
+      @include respond-to(phone){
+        display: block;
+        width: 100%;
+        text-align: center;
+        background:none;
+        padding: 0;
+      }
     }
   }// .big-mail
   form {

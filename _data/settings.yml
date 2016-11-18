@@ -1,7 +1,7 @@
 #---------------------
 #Work section
 projects:
-  - {name: MHP Sound Design, category: WordPress, folder: 'proj-1'}
+  - {name: MHP Sound, category: WordPress, folder: 'proj-1'}
   - {name: CrossFit KGB, category: Web Design, folder: 'proj-2'}
   - {name: FilmMaker, category: WordPress, folder: 'proj-3'}
   - {name: Landon Hotel, category: Web Design, folder: 'proj-4'}
@@ -34,13 +34,13 @@ clients:
     project-cat: WordPress,
     project-folder: 'proj-7',
     folder: 'client-2',
-    quote: "<p>Preston's communication skills and motivation made the project quick and easy.</p><p>If you are a high performing professional, or you have that aspiration, I would reach out. Preston knows his stuff, loves learning, and has a very tasteful aesthetic.</p><p>This synergy resulted in a website that is authentic to my brand as well as functional for my business.</p><p>Thank you! We will be working together again soon.</p>"
+    quote: "<p>Preston's communication skills and motivation made the project quick and easy.</p><p>If you are a high performing professional, or you have that aspiration, I would reach out. Preston knows his stuff, loves learning, and has a very tasteful aesthetic.</p><p>This synergy resulted in a website that is authentic to my brand as well as functional for my business. We will be working together again soon.</p>"
     }
   - {
     name: Mark Henry P.,
     title: Sound Designer,
     company: WNYC Radio,
-    project-title: "MHP Sound Design",
+    project-title: "MHP Sound",
     project-cat: WordPress,
     project-folder: 'proj-1',
     folder: 'client-3',

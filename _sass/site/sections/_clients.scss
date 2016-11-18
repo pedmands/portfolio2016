@@ -1,6 +1,5 @@
 #clients {
   background-color: $gray3;
-  padding-bottom:4rem;
   .section-header {
     .section-title {
       color:$gray5;
@@ -24,10 +23,10 @@
       width: 33%;
       padding: 0 2rem;
       @media screen and (max-width: $bp-tablet){
+        border-bottom: 1px solid $gray5;
         display: block;
         width:100%;
         margin: 0 auto;
-        min-height: 1rem;
         max-width:100%;
         padding: 0;
       }
@@ -47,8 +46,8 @@
         background: $gray4;
         box-shadow: -2px -2px 0 rgba(0,0,0,.4), 2px 2px rgba(255,255,255,.15);
         margin: 0 auto;
-        width: 170px;
-        height: 170px;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
         background-size: cover;
         @media screen and (max-width:$bp-tablet){
@@ -69,10 +68,10 @@
         }
       }
       .client-name {
-        color: $gray1;
-        font-size: 2rem;
+        color: $blue;
+        font-size: 2.25rem;
         @media screen and (max-width: $bp-tablet){
-          font-size: 2.25rem;
+          font-size: 2.5rem;
         }
       }// .client-name
       .client-title, .client-company {
@@ -83,16 +82,15 @@
         text-transform: none;
         font-style: italic;
         @media screen and (max-width: $bp-tablet){
-          font-size: 2rem;
+          font-size: 1.75rem;
         }
       }// .client-title, .client-company
       .testimonial {
-        @include ghostOutline($gray5, .1, 2px);
+        @include textOutline(white, $gray3, 2);
         padding: 2rem;
         position: relative;
         margin: 2rem auto;
         z-index: 100;
-        color:#fff;
         font-size: 1.5rem;
         font-weight: 300;
         text-align: left;
@@ -100,16 +98,14 @@
           margin-bottom: 0;
         }
         @include respond-to(phone){
-          margin: 1rem 0 2rem;
+          margin: 0;
           text-align: left;
-          text-shadow: none;
         }
         @include respond-to(tablet){
           text-shadow: none;
-          margin: 3rem auto 0;
-          padding: 4rem;
+          margin: 0 auto;
           padding-top: 0;
-          max-width: 66.6%;
+          max-width: 80%;
           font-size: 1.75rem;
           text-align: left;
         }
@@ -120,11 +116,11 @@
           position: absolute;
           top: 0;
           left: 0;
-          color: $blue;
+          color: $gray2;
           z-index:-1;
           text-shadow: none;
           @include respond-to(phone){
-            top: -3.5rem;
+            top: -1.5rem;
             left: 1.5rem;
             font-size: 4rem;
             // @include textOutline2($pink, $gray3, 1.5);
@@ -149,11 +145,13 @@
       padding: 20px 30px;
       text-transform: uppercase;
       font-family: "Raleway", sans-serif;
-
       letter-spacing: -.05rem;
       font-size: 1.75rem;
       z-index:2;
       color: white;
+      @media screen and (max-width: $bp-tablet){
+        margin-bottom:3rem;
+      }
       &:after {
         transition: all .3s ease-out;
         display:block;

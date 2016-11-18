@@ -106,7 +106,7 @@ return false;
 
 // Nav Highlighting
 $(window).scroll(function(){
-  var windowPos = $(window).scrollTop() + 60,
+  var windowPos = $(window).scrollTop() + 71,
       bgDecorated = {'background':'#DADADA'},
       textDecorated = {'color':'#f54ca3'},
       bgPlain = {'background':'none'},
@@ -157,7 +157,7 @@ $(function() {
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html, body').animate({
-          scrollTop: target.offset().top
+          scrollTop: target.offset().top -70
         }, 1000);
         return false;
       }
