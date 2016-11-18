@@ -17,6 +17,12 @@
     color: #fff;
     font-size: 4rem;
     vertical-align: middle;
+    @include respond-to(phone){
+      display: none;
+    }
+    @include respond-to(tablet){
+      font-size: 3rem;
+    }
       span {
         position: absolute;
         bottom: -1.2rem;

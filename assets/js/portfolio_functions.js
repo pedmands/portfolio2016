@@ -91,6 +91,19 @@ $(window).scroll(function() {
   navBg();
 });
 
+// Close the nav when menu item is selected
+$('#main-nav li a').click(function(){
+  var transition = $.parseJSON($('#menu-toggle').attr('data-button'));
+  $('#content').addClass(transition);
+  $('#site-wrapper').toggleClass('show-nav');
+  $('#menu').toggleClass('open');
+  $('#content').toggleClass('faded');
+  $('.logo').toggleClass('fly-out');
+  $('#menu-toggle').toggleClass('toggled');
+  $('.menu-bg').toggleClass('toggled');
+return false;
+});
+
 // Nav Highlighting
 $(window).scroll(function(){
   var windowPos = $(window).scrollTop() + 60,
@@ -144,7 +157,7 @@ $(function() {
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html, body').animate({
-          scrollTop: target.offset().top 
+          scrollTop: target.offset().top
         }, 1000);
         return false;
       }
@@ -152,35 +165,9 @@ $(function() {
   });
 });
 
-function workBelt() {
+function workButtons() {
+  var lastClicked;
   $('.thumb-unit').click(function() {
-    var target = $('#work-wrap');
-    $('.work-belt').css('left','-100%');
-    $('.work-container').fadeIn();
-
-  });
-  $('.work-return').click(function(){
-    var target = $('#work-title');
-    $('html,body').animate({ scrollTop: target.offset().top - 50}, 500);
-    $('.thumb-wrap').fadeIn();
-    $('.work-belt').css('left','0');
-    $('.work-container').fadeOut();
-  });
-  $('#bottom-button').click(function(){
-    var target = $('#work-title');
-    $('html,body').animate({ scrollTop: target.offset().top - 50}, 500);
-    $('.thumb-wrap').fadeIn();
-    $('.work-belt').css('left','0');
-    $('.work-container').fadeOut();
-  });
-}
-workBelt();
-
-// Load projects into work space
-function workLoad(){
-  $.ajaxSetup ({ cache: true });
-
-  $('.thumb-unit').click(function(){
     var $this = $(this),
         newTitle = $this.find('.thumb-title').text(),
         newCat = $this.find('.thumb-cat').text(),
@@ -189,6 +176,9 @@ function workLoad(){
         newHTML = '/work/' + newFolder + '.html',
         target = $('#work-wrap'),
         windowPos = $(window).scrollTop();
+        lastClicked = $(this);
+    $('.work-belt').css('left','-100%');
+    $('.work-container').fadeIn();
     $('.project-load').html(spinner).load(newHTML);
     $('.project-title').text(newTitle);
     $('.project-cat').text(newCat);
@@ -198,10 +188,54 @@ function workLoad(){
       $('html,body').animate({ scrollTop: target.offset().top }, 500);
     }
   });
+  $('.view-project').click(function(){
+    var $this = $(this),
+        newTitle = $this.data('title'),
+        newCat = $this.data('cat'),
+        newFolder = $this.data('folder'),
+        spinner = '<div class="loader">Loading...</div>',
+        newHTML = '/work/' + newFolder + '.html',
+        target = $('#work-wrap'),
+        windowPos = $(window).scrollTop();
+        lastClicked = $(this);
+    $('.project-load').html(spinner).load(newHTML);
+    $('.project-title').text(newTitle);
+    $('.project-cat').text(newCat);
+    $('.work-belt').css('left','-100%');
+    $('.work-container').fadeIn();
+    if (windowPos > $('#work-link').offset().top){
+      $('html,body').animate({ scrollTop: target.offset().top - 60}, 500);
+    } else {
+      $('html,body').animate({ scrollTop: target.offset().top }, 500);
+    }
+  });
+  $('.work-return').click(function(){
+    var target = lastClicked;
+    $('html,body').animate({ scrollTop: target.offset().top - 50}, 500);
+    $('.thumb-wrap').fadeIn();
+    $('.work-belt').css('left','0');
+    $('.work-container').fadeOut();
+  });
+  $('#bottom-button').click(function(){
+    var target = lastClicked;
+    $('html,body').animate({ scrollTop: target.offset().top - 50}, 500);
+    $('.thumb-wrap').fadeIn();
+    $('.work-belt').css('left','0');
+    $('.work-container').fadeOut();
+  });
+}
+workButtons();
+
+
+// Load projects into work space
+function workLoad(){
+  $.ajaxSetup ({ cache: true });
 }
 workLoad();
+// Load on click - WORK SECTION
+$('.thumb-unit').click(function(){
 
-
+});
 
 
 function resumeStuff(){

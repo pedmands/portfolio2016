@@ -15,7 +15,9 @@
        </span>
            <blockquote class="testimonial">{{ client.quote }}</blockquote>
             <!-- <div class="separator size-small bottom-margin"><span></span></div> -->
-     </div>
+
+              <button class="view-project" data-folder="{{client.project-folder}}" data-title="{{client.project-title}}" data-cat="{{client.project-cat}}">View Project</button>
+     </div><!-- .client -->
      {% endfor %}
-   </div><!-- clients-container -->
+   </div><!-- .clients-container -->
 </section><!-- / #clients -->

@@ -277,16 +277,15 @@
   @include respond-to(laptop){
     display:none;
   }
-  display: block;
   position: absolute;
-  top: 50%;
+  top: 40%;
+  transform: translateY(-50%);
   left: 0;
   z-index:100;
   @media screen and (max-width: $bp-tablet){
       top: 14rem;
       font-size: 5rem;
   }
-  transform: translateY(-50%);
   .resume-control-prev {
     position: absolute;
     top:50%;

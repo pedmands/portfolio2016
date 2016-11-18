@@ -3,30 +3,19 @@
       <h2 class="section-title">About Me</h2>
       <div class="separator size-small"><span></span></div>
    </header>
+
   <div class="bio-belt">
-    <aside id="formal">
-      <div class="face-lockup">
+    <aside class="formal">
         <div class="face-image">
           <!-- <img src="assets/img/face.png" alt=""> -->
         </div>
-        <div class="icon-keyboard"><div class="path">{% include icons/icon-keyboard.html %}</div>  <strong>Programmer</strong></div>
-        <div class="icon-pencil"><div class="path">{% include icons/icon-pencil.html %}</div>  <strong>Graphic Artist</strong></div>
-        <div class="icon-steering-wheel"><div class="path">{% include icons/icon-steering-wheel.html %}</div>  <strong>UI/UX Designer</strong></div>
-        <div class="icon-wrench"><div class="path">{% include icons/icon-wrench.html %}</div> <strong>Web Developer</strong></div>
-      </div><!-- .face-lockup -->
     </aside><!-- formal -->
-    <aside id="casual">
-     <div class="face-lockup">
+    <aside class="casual">
        <div class="face-image">
          <!-- <img src="assets/img/face.png" alt=""> -->
        </div>
-       <div class="icon-keyboard"><div class="path">{% include icons/icon-piano-keys.html %}</div>  <strong>Musician</strong></div>
-       <div class="icon-pencil"><div class="path">{% include icons/icon-red-sox.html %}</div>  <strong>Red Sox Fan</strong></div>
-       <div class="icon-steering-wheel"><div class="path">{% include icons/icon-sliders.html %}</div>  <strong>Audio Engineer</strong></div>
-       <div class="icon-wrench"><div class="path">{% include icons/icon-bicycle.html %}</div> <strong>Cyclist</strong></div>
-     </div><!-- .face-lockup -->
    </aside>
-  </div>
+ </div><!-- .bio-belt -->
 
   <div class="about-toggle-box">
     <div class="toggle-tie toggled">{% include icons/toggle-tie.html %}</div>
@@ -35,7 +24,25 @@
   </div><!-- .about-toggle-box -->
 
   <div class="bio-belt">
-    <aside id="formal">
+    <aside class="formal">
+      <div class="skills-lockup">
+        <div class="icon-keyboard"><div class="path">{% include icons/icon-keyboard.html %}</div>  <strong>Programmer</strong></div>
+        <div class="icon-pencil"><div class="path">{% include icons/icon-pencil.html %}</div>  <strong>Graphic Artist</strong></div>
+        <div class="icon-steering-wheel"><div class="path">{% include icons/icon-steering-wheel.html %}</div>  <strong>UI/UX Designer</strong></div>
+        <div class="icon-wrench"><div class="path">{% include icons/icon-wrench.html %}</div> <strong>Web Developer</strong></div>
+      </div>
+    </aside><!-- formal -->
+    <aside class="casual">
+      <div class="skills-lockup">
+        <div class="icon-keyboard"><div class="path">{% include icons/icon-piano-keys.html %}</div>  <strong>Musician</strong></div>
+        <div class="icon-pencil"><div class="path">{% include icons/icon-red-sox.html %}</div>  <strong>Red Sox Fan</strong></div>
+        <div class="icon-steering-wheel"><div class="path">{% include icons/icon-sliders.html %}</div>  <strong>Audio Engineer</strong></div>
+        <div class="icon-wrench"><div class="path">{% include icons/icon-bicycle.html %}</div> <strong>Cyclist</strong></div>
+      </div>
+   </aside>
+  </div><!-- .bio-belt -->
+  <div class="bio-belt">
+    <aside class="formal">
      <div class="blurb">
        <p>
          I began working with computers at an early age, writing my first program in GW-BASIC at age 8 on an Apple IIe. In elementary school I became interested in visual art which, combined with my love of computers, led to my studying web design; learning programs like <em>Macromedia</em> Flash and languages like HTML <em>2.0</em>.
@@ -45,7 +52,7 @@
        </p>
      </div>
     </aside>
-    <aside id="casual">
+    <aside class="casual">
      <div class="blurb">
        <p>
           I like baseball because SPORTS! And also, I used to own a pretty sweet Schwin! Hmm, Oh maybe I should put CrossFit here too, as it fits - what with it being yet ANOTHER passion that has waxed and recently waned...
