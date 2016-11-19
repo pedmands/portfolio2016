@@ -18,6 +18,7 @@
   box-shadow: none;
   border: none;
   border-radius: 5px;
+  color: $gray1;
   &:before {
     display: block;
     font-family: FontAwesome;
@@ -32,7 +33,6 @@
   &:hover {
     box-shadow: none;
     background: darken($blue, 25%);
-
   }
   &:visited {
     color: $gray1;

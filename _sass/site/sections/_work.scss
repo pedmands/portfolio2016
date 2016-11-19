@@ -22,7 +22,7 @@
     }
     position: relative;
   }
-  .section-title {color:$gray5;}
+  .section-title {color:$gray4;}
 
   .thumb-container {
     margin:0 2rem;
@@ -55,7 +55,7 @@
         width:100%;
         padding-top: 54%;
         margin-bottom: 2rem;
-        &:nth-child(6),&:nth-child(9),&:nth-child(10),&:nth-child(11),&:nth-child(12){
+        &:nth-child(10),&:nth-child(11),&:nth-child(12){
           display: none;
         }
       }
@@ -152,7 +152,7 @@
     }
     img {
       max-width: 100%;
-      margin-bottom: 2rem;
+
     }
     .project-load {
       padding: 2rem;
@@ -183,6 +183,52 @@
       font-style: italic;
       font-size: 2rem;
       color:$gray3;
+    }
+    .img-w-caption {
+      margin-bottom: 30px;
+      .img-caption {
+        border-top:3px solid $blue;
+        height:70px;
+        position: relative;
+        display: block;
+        width: 100%;
+        background: lighten($gray2,15%);
+        p {
+          display: inline-block;
+          width: 75%;
+          font-size: 16px;
+          vertical-align: middle;
+          margin: 0 auto;
+          font-style: italic;
+        }
+        .zoom {
+          position: relative;
+          transition: all .3s ease-in-out;
+          background: $gray2;
+          box-shadow: none;
+          width: 70px;
+          height: 70px;
+          border: none;
+          border-radius: 0;
+          color: white;
+          float:right;
+          i {
+            transition: all .3s ease-out;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 30px;
+          }
+          &:hover {
+            box-shadow: none;
+            background: darken($gray2, 15%);
+            i {
+              font-size: 40px;
+            }
+          }
+        }// .zoom
+      }
     }
     p {padding:1rem;}
     .work-return {
@@ -226,7 +272,7 @@
         margin-left: 1rem;
       }
     }
-    i {
+    .work-return {
       position: absolute;
       left:4rem;
       @include respond-to(phone){

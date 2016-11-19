@@ -1,18 +1,66 @@
 #---------------------
 #Work section
 projects:
-  - {name: MHP Sound, category: WordPress, folder: 'proj-1'}
-  - {name: CrossFit KGB, category: Web Design, folder: 'proj-2'}
-  - {name: FilmMaker, category: WordPress, folder: 'proj-3'}
-  - {name: Landon Hotel, category: Web Design, folder: 'proj-4'}
-  - {name: ReDeSign, category: Graphic Design, folder: 'proj-5'}
-  - {name: Survivor Speak, category: Graphic Design, folder: 'proj-6'}
-  - {name: Topical Roots, category: WordPress, folder: 'proj-7'}
-  - {name: Aging All Right, category: WordPress, folder: 'proj-8'}
-  - {name: Chirply, category: Ruby on Rails, folder: 'proj-9'}
-  - {name: Dev Hub, category: Ruby on Rails, folder: 'proj-10'}
-  - {name: White Noise, category: WordPress, folder: 'proj-11'}
-  - {name: White Noise, category: WordPress, folder: 'proj-12'}
+  - {
+    name: MHP Sound,
+    category: WordPress,
+    folder: 'proj-1'
+    }
+  - {
+    name: CrossFit KGB,
+    category: Web Design,
+    folder: 'proj-2'
+    }
+  - {
+    name: FilmMaker,
+    category: WordPress,
+    folder: 'proj-3'
+    }
+  - {
+    name: White Noise,
+    category: WordPress,
+    folder: 'proj-4'
+    }
+  - {
+    name: Topical Roots,
+    category: WordPress,
+    folder: 'proj-5'
+    }
+  - {
+    name: Chirply,
+    category: Ruby on Rails,
+    folder: 'proj-6'
+    }
+  - {
+    name: Skreddy Pedals,
+    category: Metal Etching,
+    folder: 'proj-7'
+    }
+  - {
+    name: Dev Hub,
+    category: Ruby on Rails,
+    folder: 'proj-8'
+    }
+  - {
+    name: Landon Hotel,
+    category: Web Design,
+    folder: 'proj-9'
+    }
+  - {
+    name: ReDeSign,
+    category: Graphic Design,
+    folder: 'proj-10'
+    }
+  - {
+    name: Aging All Right,
+    category: WordPress,
+    folder: 'proj-11'
+    }
+  - {
+    name: Survivor Speak,
+    category: Graphic Design,
+    folder: 'proj-12'
+    }
 
 # clients
 clients:
@@ -32,7 +80,7 @@ clients:
     company: Maine Roots Consulting,
     project-title: "Topical Roots",
     project-cat: WordPress,
-    project-folder: 'proj-7',
+    project-folder: 'proj-5',
     folder: 'client-2',
     quote: "<p>Preston's communication skills and motivation made the project quick and easy.</p><p>If you are a high performing professional, or you have that aspiration, I would reach out. Preston knows his stuff, loves learning, and has a very tasteful aesthetic.</p><p>This synergy resulted in a website that is authentic to my brand as well as functional for my business. We will be working together again soon.</p>"
     }
@@ -44,5 +92,5 @@ clients:
     project-cat: WordPress,
     project-folder: 'proj-1',
     folder: 'client-3',
-    quote: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.'
+    quote: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>'
     }

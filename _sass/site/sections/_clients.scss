@@ -2,7 +2,7 @@
   background-color: $gray3;
   .section-header {
     .section-title {
-      color:$gray5;
+      color:$gray4;
     }
   }// .section-header
   .clients-container {
@@ -51,25 +51,28 @@
         border-radius: 50%;
         background-size: cover;
         @media screen and (max-width:$bp-tablet){
-          width:200px;
-          height:200px;
+          width:140px;
+          height:140px;
         }
       }// .client-face
       .client-details {
-        @include respond-to(phone){
+          position: relative;
           display: block;
           width:100%;
           padding: 1rem 0;
-        }
+          
         @include respond-to(tablet){
-          display: block;
-          width:100%;
+          display: inline-block;
+          width:auto;
+          margin: 0 auto;
           padding: 1rem 0;
         }
       }
       .client-name {
         color: $blue;
         font-size: 2.25rem;
+        text-transform: none;
+        font-weight: 400;
         @media screen and (max-width: $bp-tablet){
           font-size: 2.5rem;
         }
@@ -78,7 +81,7 @@
         display: inline-block;
         font-family: "Merriweather", serif;
         font-weight: 300;
-        color: $gray1;
+        color: $gray2;
         text-transform: none;
         font-style: italic;
         @media screen and (max-width: $bp-tablet){
@@ -86,14 +89,19 @@
         }
       }// .client-title, .client-company
       .testimonial {
-        @include textOutline(white, $gray3, 2);
-        padding: 2rem;
+        color:#f6f6f6;
+        padding: 0 10px;
         position: relative;
         margin: 2rem auto;
         z-index: 100;
-        font-size: 1.5rem;
-        font-weight: 300;
+        font-weight: 400;
         text-align: left;
+        font-size: 18px;
+        line-height: 1.5;
+        p {
+          font-family: "Roboto Slab";
+          font-weight: 300;
+        }
         &:last-child {
           margin-bottom: 0;
         }
@@ -102,33 +110,19 @@
           text-align: left;
         }
         @include respond-to(tablet){
-          text-shadow: none;
           margin: 0 auto;
-          padding-top: 0;
           max-width: 80%;
-          font-size: 1.75rem;
           text-align: left;
         }
         &:before {
           font-family: FontAwesome;
           content: '\f10d';
-          font-size: 4rem;
+          font-size: 30px;
           position: absolute;
-          top: 0;
-          left: 0;
-          color: $gray2;
+          top: -22.5px;
+          left: -12.5px;
+          color: darken($gray2,20%);
           z-index:-1;
-          text-shadow: none;
-          @include respond-to(phone){
-            top: -1.5rem;
-            left: 1.5rem;
-            font-size: 4rem;
-            // @include textOutline2($pink, $gray3, 1.5);
-          }
-          @include respond-to(tablet){
-            top: -2rem;
-            left: 1rem;
-          }
         }// &:before
       }// .testimonial
     .view-project {
